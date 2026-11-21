@@ -1,0 +1,291 @@
+{
+  "kind": "imprint",
+  "items": [
+    {
+      "id": "imprint.缩小",
+      "kind": "imprint",
+      "name": "缩小",
+      "expansion": null,
+      "description": "武器可以随你想法变小",
+      "source": {
+        "sheet": "灵能印记",
+        "row": 4
+      }
+    },
+    {
+      "id": "imprint.放大",
+      "kind": "imprint",
+      "name": "放大",
+      "expansion": null,
+      "description": "武器可以随你想法变大",
+      "source": {
+        "sheet": "灵能印记",
+        "row": 5
+      }
+    },
+    {
+      "id": "imprint.柔软",
+      "kind": "imprint",
+      "name": "柔软",
+      "expansion": null,
+      "description": "武器可以变得柔软",
+      "source": {
+        "sheet": "灵能印记",
+        "row": 6
+      }
+    },
+    {
+      "id": "imprint.坚硬",
+      "kind": "imprint",
+      "name": "坚硬",
+      "expansion": null,
+      "description": "武器可以变得坚硬",
+      "source": {
+        "sheet": "灵能印记",
+        "row": 7
+      }
+    },
+    {
+      "id": "imprint.轻便",
+      "kind": "imprint",
+      "name": "轻便",
+      "expansion": null,
+      "description": "武器对于你来说很轻便，即使其外观看起来不是这样",
+      "source": {
+        "sheet": "灵能印记",
+        "row": 8
+      }
+    },
+    {
+      "id": "imprint.沉重",
+      "kind": "imprint",
+      "name": "沉重",
+      "expansion": null,
+      "description": "武器对于他人来说很沉重，难以正常握持或挥动",
+      "source": {
+        "sheet": "灵能印记",
+        "row": 9
+      }
+    },
+    {
+      "id": "imprint.失衡",
+      "kind": "imprint",
+      "name": "失衡",
+      "expansion": null,
+      "description": "武器可以用来干扰敌人或是制造破绽",
+      "source": {
+        "sheet": "灵能印记",
+        "row": 10
+      }
+    },
+    {
+      "id": "imprint.守护",
+      "kind": "imprint",
+      "name": "守护",
+      "expansion": null,
+      "description": "武器适合用于抵挡攻击或是规避伤害",
+      "source": {
+        "sheet": "灵能印记",
+        "row": 11
+      }
+    },
+    {
+      "id": "imprint.多重",
+      "kind": "imprint",
+      "name": "多重",
+      "expansion": null,
+      "description": "你持有武器是复数的，通常是一组造型相似的武器。它们为你在战斗时带来了数量上的优势",
+      "source": {
+        "sheet": "灵能印记",
+        "row": 12
+      }
+    },
+    {
+      "id": "imprint.组合",
+      "kind": "imprint",
+      "name": "组合",
+      "expansion": null,
+      "description": "武器由数个你自行决定的部件组合而成，这使得武器可以分开，也可以组合成型，即使其外观看起来无法做到",
+      "source": {
+        "sheet": "灵能印记",
+        "row": 13
+      }
+    },
+    {
+      "id": "imprint.分身",
+      "kind": "imprint",
+      "name": "分身",
+      "expansion": null,
+      "description": "武器可以分裂或衍生出其复制体",
+      "source": {
+        "sheet": "灵能印记",
+        "row": 14
+      }
+    },
+    {
+      "id": "imprint.悬空",
+      "kind": "imprint",
+      "name": "悬空",
+      "expansion": null,
+      "description": "武器可以随你意志漂浮在空中",
+      "source": {
+        "sheet": "灵能印记",
+        "row": 15
+      }
+    },
+    {
+      "id": "imprint.警戒",
+      "kind": "imprint",
+      "name": "警戒",
+      "expansion": null,
+      "description": "武器能够为你预知危险",
+      "source": {
+        "sheet": "灵能印记",
+        "row": 16
+      }
+    },
+    {
+      "id": "imprint.高速",
+      "kind": "imprint",
+      "name": "高速",
+      "expansion": null,
+      "description": "在使用武器时，你的自身速度能够得到提升",
+      "source": {
+        "sheet": "灵能印记",
+        "row": 17
+      }
+    },
+    {
+      "id": "imprint.隐蔽",
+      "kind": "imprint",
+      "name": "隐蔽",
+      "expansion": null,
+      "description": "在使用武器时，你能够隐藏自身的气息",
+      "source": {
+        "sheet": "灵能印记",
+        "row": 18
+      }
+    },
+    {
+      "id": "imprint.转移",
+      "kind": "imprint",
+      "name": "转移",
+      "expansion": null,
+      "description": "你的武器能够带领你进行短距离的瞬间移动",
+      "source": {
+        "sheet": "灵能印记",
+        "row": 19
+      }
+    },
+    {
+      "id": "imprint.神圣",
+      "kind": "imprint",
+      "name": "神圣",
+      "expansion": null,
+      "description": "武器可以用于抵抗邪恶的力量",
+      "source": {
+        "sheet": "灵能印记",
+        "row": 20
+      }
+    },
+    {
+      "id": "imprint.能量",
+      "kind": "imprint",
+      "name": "能量",
+      "expansion": null,
+      "description": "武器可以是一种元素能量：光、火、雷、冰、水、土、风等",
+      "source": {
+        "sheet": "灵能印记",
+        "row": 21
+      }
+    },
+    {
+      "id": "imprint.变形",
+      "kind": "imprint",
+      "name": "变形",
+      "expansion": null,
+      "description": "武器可以转化为另外一种形态",
+      "source": {
+        "sheet": "灵能印记",
+        "row": 22
+      }
+    },
+    {
+      "id": "imprint.材质",
+      "kind": "imprint",
+      "name": "材质",
+      "expansion": null,
+      "description": "该武器可以呈现为某种现实材质：金、银、铜、钢、铁、木、石、骨、玉等",
+      "source": {
+        "sheet": "灵能印记",
+        "row": 23
+      }
+    },
+    {
+      "id": "imprint.智能",
+      "kind": "imprint",
+      "name": "智能",
+      "expansion": null,
+      "description": "该武器拥有一定智能，能够理解你的话语和指令，还懂得如何使用自己",
+      "source": {
+        "sheet": "灵能印记",
+        "row": 24
+      }
+    },
+    {
+      "id": "imprint.附着",
+      "kind": "imprint",
+      "name": "附着",
+      "expansion": null,
+      "description": "武器可以持续附着在其他物品/生物上",
+      "source": {
+        "sheet": "灵能印记",
+        "row": 25
+      }
+    },
+    {
+      "id": "imprint.相位",
+      "kind": "imprint",
+      "name": "相位",
+      "expansion": null,
+      "description": "武器能暂时穿透实体障碍物",
+      "source": {
+        "sheet": "灵能印记",
+        "row": 26
+      }
+    },
+    {
+      "id": "imprint.音爆",
+      "kind": "imprint",
+      "name": "音爆",
+      "expansion": null,
+      "description": "武器能产生强大的冲击性音波",
+      "source": {
+        "sheet": "灵能印记",
+        "row": 27
+      }
+    },
+    {
+      "id": "imprint.磁力",
+      "kind": "imprint",
+      "name": "磁力",
+      "expansion": null,
+      "description": "武器能吸引或排斥特定材质的物体",
+      "source": {
+        "sheet": "灵能印记",
+        "row": 28
+      }
+    },
+    {
+      "id": "imprint.幻映",
+      "kind": "imprint",
+      "name": "幻映",
+      "expansion": null,
+      "description": "武器表面可投射预设光影图像",
+      "source": {
+        "sheet": "灵能印记",
+        "row": 29
+      }
+    }
+  ]
+}

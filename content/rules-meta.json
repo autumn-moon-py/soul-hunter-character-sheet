@@ -1,0 +1,148 @@
+{
+  "rulesVersion": "1.0.1",
+  "attributes": [
+    {
+      "id": "body",
+      "name": "体魄"
+    },
+    {
+      "id": "mind",
+      "name": "智慧"
+    },
+    {
+      "id": "soul",
+      "name": "心魂"
+    }
+  ],
+  "skills": [
+    {
+      "id": "athletics",
+      "name": "运动",
+      "attribute": "body"
+    },
+    {
+      "id": "operation",
+      "name": "操作",
+      "attribute": "mind"
+    },
+    {
+      "id": "stealth",
+      "name": "隐秘",
+      "attribute": "mind"
+    },
+    {
+      "id": "investigation",
+      "name": "调查",
+      "attribute": "mind"
+    },
+    {
+      "id": "insight",
+      "name": "洞察",
+      "attribute": "soul"
+    },
+    {
+      "id": "persuasion",
+      "name": "说服",
+      "attribute": "soul"
+    },
+    {
+      "id": "hunter-lore",
+      "name": "狩魂学识",
+      "attribute": null
+    }
+  ],
+  "grades": [
+    {
+      "grade": "E",
+      "value": 1
+    },
+    {
+      "grade": "D",
+      "value": 2
+    },
+    {
+      "grade": "C",
+      "value": 3
+    },
+    {
+      "grade": "B",
+      "value": 4
+    },
+    {
+      "grade": "A",
+      "value": 5
+    },
+    {
+      "grade": "S",
+      "value": 6
+    },
+    {
+      "grade": "SS",
+      "value": 7
+    },
+    {
+      "grade": "SSS",
+      "value": 8
+    },
+    {
+      "grade": "SSS+",
+      "value": 9
+    }
+  ],
+  "insightThresholds": [
+    {
+      "insight": 10,
+      "unlock": "specialty",
+      "label": "获得一项自选专长"
+    },
+    {
+      "insight": 12,
+      "unlock": "soulWeapon",
+      "label": "获得灵魂武器"
+    },
+    {
+      "insight": 14,
+      "unlock": "ultimate1",
+      "label": "习得一挡狩魂绝技"
+    },
+    {
+      "insight": 16,
+      "unlock": "specialty2",
+      "label": "获得另一项自选专长"
+    },
+    {
+      "insight": 18,
+      "unlock": "ultimate2",
+      "label": "习得二挡狩魂绝技"
+    }
+  ],
+  "base": {
+    "insight": 9,
+    "attributeMin": 1,
+    "attributeMaxAtCreation": 5,
+    "attributeMax": 9,
+    "hpBase": 5,
+    "mpBase": 5,
+    "defense": 10,
+    "itemPoints": 3,
+    "stylePoints": 10,
+    "stylePointsMax": 100,
+    "expMax": 10
+  },
+  "growthCosts": {
+    "insight": 6,
+    "imprint": 4,
+    "experienceTag": 4
+  },
+  "limits": {
+    "abilityTags": 3,
+    "abilityTagsHighSoul": 4,
+    "abilityChars": 80,
+    "abilityCharsHighSoul": 100,
+    "experienceTags": 3,
+    "soulWeaponImprints": "soulStrength",
+    "specialties": 2,
+    "ultimates": 2
+  },
+  "expansions": []
+}

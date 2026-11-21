@@ -1,0 +1,412 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 98%;
+  --foreground: 240 6% 10%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 6% 10%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 6% 10%;
+  --primary: 240 6% 10%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 5% 96%;
+  --secondary-foreground: 240 6% 10%;
+  --muted: 240 5% 96%;
+  --muted-foreground: 240 4% 46%;
+  --accent: 240 5% 96%;
+  --accent-foreground: 240 6% 10%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 6% 90%;
+  --input: 240 6% 90%;
+  --ring: 240 6% 10%;
+  --radius: 8px;
+  --font-display: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    "Noto Sans SC", sans-serif;
+  --font-body: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    "Noto Sans SC", sans-serif;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  background: #f7f7f8;
+  color-scheme: light;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: #f7f7f8;
+  color: hsl(var(--foreground));
+  font-family: var(--font-body);
+  font-size: 14px;
+}
+
+::selection {
+  background: rgba(24, 24, 27, 0.12);
+}
+
+.font-display {
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+/* ===== Paper sheet（黑白线稿纸卡） ===== */
+.paper {
+  --pc-ink: #232323;
+  --pc-line: #2b2b2b;
+  --pc-line-soft: #d9d2c4;
+  --pc-label: #f2eee4;
+  --pc-label-ink: #4a4438;
+
+  width: 100%;
+  max-width: 210mm;
+  margin: 0 auto;
+  padding: 12px;
+  background:
+    radial-gradient(rgba(35, 35, 35, 0.035) 1px, transparent 1px) 0 0 / 7px 7px,
+    #fbf9f4;
+  border: 2px solid var(--pc-line);
+  border-radius: 3px;
+  box-shadow: 0 18px 44px -30px rgba(0, 0, 0, 0.5);
+  color: var(--pc-ink);
+  font-size: 12px;
+}
+
+.paper-block {
+  break-inside: avoid;
+}
+
+.paper-block-title {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: fit-content;
+  min-height: 24px;
+  align-items: center;
+  gap: 6px;
+  margin-left: 6px;
+  margin-bottom: -6px;
+  padding: 2px 12px 2px 7px;
+  border-radius: 999px;
+  background: var(--pc-ink);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.paper-block-title .paper-block-meta {
+  position: static;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #d8d2c4;
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.paper-block-body {
+  overflow: hidden;
+  border: 2px solid var(--pc-line);
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.55);
+  padding: 8px 8px 6px;
+}
+
+.paper-block-body.is-flush {
+  padding: 0;
+}
+
+/* 字段网格：浅灰标签 + 值 */
+.pc-field {
+  display: flex;
+  min-width: 0;
+  min-height: 34px;
+  border-bottom: 1px solid var(--pc-line-soft);
+}
+
+/* 自增高输入所在行：行高跟随内容，避免单行时保留整行最小高度 */
+.pc-field.is-auto {
+  min-height: 0;
+}
+
+.pc-field:last-child {
+  border-bottom: 0;
+}
+
+/* 网格里的字段是并列项，last-child 不应吃掉右侧单元格的分隔线 */
+.grid > .pc-field {
+  border-bottom: 1px solid var(--pc-line-soft);
+}
+
+.pc-label {
+  display: flex;
+  width: 56px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--pc-line-soft);
+  background: var(--pc-label);
+  color: var(--pc-label-ink);
+  font-size: 10px;
+  line-height: 1.2;
+  padding: 2px 3px;
+  text-align: center;
+}
+
+.pc-value {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  align-items: center;
+  padding: 0 6px;
+  background: #fff;
+}
+
+/* 表格 */
+.pc-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.paper .pc-field,
+.paper .pc-label,
+.paper .pc-table th,
+.paper .pc-table td {
+  border-color: var(--pc-line-soft);
+}
+
+.pc-table th {
+  border: 1px solid var(--pc-line-soft);
+  background: var(--pc-label);
+  color: #52525b;
+  padding: 2px 4px;
+  font-size: 10px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.pc-table td {
+  height: 32px;
+  border: 1px solid var(--pc-line-soft);
+  padding: 2px 4px;
+  font-size: 10px;
+  vertical-align: middle;
+}
+
+/* 技能表的属性强度 / 技能强度 */
+.pc-table td.pc-skill-value {
+  font-size: 15px;
+}
+
+.paper-step-button {
+  display: inline-flex;
+  height: 18px;
+  width: 18px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  color: #71717a;
+}
+
+.paper-step-button:hover:not(:disabled) {
+  background: #f4f4f5;
+  color: var(--pc-ink);
+}
+
+.paper-step-button:disabled {
+  opacity: 0.35;
+}
+
+.paper input:not([type="checkbox"]),
+.paper textarea,
+.paper button[role="combobox"] {
+  width: 100%;
+  min-width: 0;
+  height: 22px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 0 2px;
+  color: var(--pc-ink);
+  font-size: 12px;
+  line-height: 22px;
+  box-shadow: none;
+}
+
+.paper textarea {
+  height: auto;
+  min-height: 32px;
+  padding: 2px;
+  line-height: 1.5;
+  resize: none;
+}
+
+.paper input:focus,
+.paper textarea:focus,
+.paper button[role="combobox"]:focus {
+  outline: none;
+  box-shadow: inset 0 -1px 0 var(--pc-line);
+}
+
+/* 经历标签：多行自动撑高，聚焦时用外框提示，避免内部出现一条横线 */
+.paper textarea.tag-input:focus {
+  box-shadow: none;
+}
+
+/* 基础属性数值：手填输入，虚线提示可编辑 */
+.paper input.pc-attr-input {
+  width: 3rem;
+  height: 1.75rem;
+  border-bottom: 1px dashed var(--pc-line);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.75rem;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.paper input.pc-attr-input:hover,
+.paper input.pc-attr-input:focus {
+  background: #f7f4ed;
+  box-shadow: none;
+  border-bottom-style: solid;
+  border-bottom-color: var(--pc-ink);
+}
+
+.paper input::placeholder,
+.paper textarea::placeholder {
+  color: #a89f8c;
+}
+
+.paper button[role="combobox"][data-placeholder] {
+  color: #a89f8c;
+}
+
+.paper input:disabled,
+.paper textarea:disabled,
+.paper button[role="combobox"]:disabled {
+  opacity: 0.45;
+}
+
+@media print {
+  .no-print,
+  [data-page-hidden="true"] {
+    display: none !important;
+  }
+
+  .paper {
+    max-width: none;
+    min-height: auto;
+    border: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .paper-block {
+    break-inside: avoid;
+  }
+
+  .paper input,
+  .paper textarea {
+    box-shadow: none;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 10mm;
+}
+
+.stat-tile {
+  border: 1px solid hsl(var(--border));
+  border-radius: 6px;
+  background: hsl(var(--muted) / 0.35);
+}
+
+/* Compact form controls inside the sheet */
+.sheet-card input:not([type="checkbox"]),
+.sheet-card button[role="combobox"] {
+  height: 2.25rem;
+  font-size: 13px;
+}
+
+.sheet-card textarea {
+  min-height: 3.25rem;
+  font-size: 13px;
+}
+
+.entry-row {
+  border: 1px solid #d4d4d8;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(35, 35, 35, 0.06);
+  transition:
+    border-color 120ms ease,
+    background-color 120ms ease,
+    box-shadow 120ms ease;
+}
+
+.entry-row:hover {
+  border-color: #a1a1aa;
+  background: hsl(var(--muted) / 0.45);
+  box-shadow: 0 2px 6px rgba(35, 35, 35, 0.08);
+}
+
+.entry-row[data-selected="true"] {
+  border-color: #a1a1aa;
+  background: hsl(var(--muted) / 0.5);
+}
+
+/* Keep long card lists light when scrolling */
+.card-row {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 88px;
+}
+
+/* ===== Dialogs ===== */
+.dialog-surface {
+  background: #fff;
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  box-shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.35);
+}
+
+/* ===== Scrollbar ===== */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--border)) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: hsl(var(--border));
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,370 @@
+{
+  "generatedAt": "2026-11-18T06:21:58.184092+00:00",
+  "summary": {
+    "errors": 0,
+    "warnings": 0,
+    "infos": 52
+  },
+  "counts": {
+    "martial": 56,
+    "spell": 129,
+    "imprint": 26,
+    "specialty": 29,
+    "ultimate": 10,
+    "styleAction": 26
+  },
+  "coverage": {
+    "martial": {
+      "xlsx": 56,
+      "markdown": 55,
+      "common": 55,
+      "xlsxOnly": [
+        "常规攻击"
+      ],
+      "markdownOnly": []
+    },
+    "spell": {
+      "xlsx": 129,
+      "markdown": 78,
+      "common": 78,
+      "xlsxOnly": [
+        "七星灯续命阵",
+        "三尸神暴走",
+        "业火红莲",
+        "二十八宿阵",
+        "五岳镇魂符",
+        "五芒星阵",
+        "八门遁甲阵",
+        "六丁六甲阵",
+        "六字大明遁",
+        "兵解飞剑",
+        "凝爆",
+        "北斗封魔钉",
+        "北欧卢恩阵",
+        "四象阵",
+        "天罗地网",
+        "天罡北斗阵",
+        "奇门遁甲阵",
+        "形意八极",
+        "德鲁伊树阵",
+        "所罗门六芒星阵",
+        "扶褉术",
+        "挪转术",
+        "撒豆成兵阵",
+        "曼陀罗阵",
+        "灵迹",
+        "烈光炮",
+        "热狂术",
+        "熊神之力",
+        "玛雅血祭阵",
+        "电闪",
+        "瘟疫之舞",
+        "盂兰鬼门",
+        "祖灵战歌",
+        "血傩替身咒",
+        "血月诅咒",
+        "西乌洛波洛斯炼成阵",
+        "超感",
+        "金刚缚魔印",
+        "阴兵借道",
+        "阴封咒",
+        "阿努比斯冥阵",
+        "雪狼魂",
+        "雷池阵",
+        "雷祖召来",
+        "雹坠",
+        "霞光击",
+        "霞炎破",
+        "霞飞炎",
+        "骨卜反噬",
+        "鹰灵附体",
+        "黄泉九幽阵"
+      ],
+      "markdownOnly": []
+    },
+    "specialty": {
+      "xlsx": 29,
+      "markdown": 29,
+      "common": 29,
+      "xlsxOnly": [],
+      "markdownOnly": []
+    },
+    "ultimate": {
+      "xlsx": 10,
+      "markdown": 10,
+      "common": 10,
+      "xlsxOnly": [],
+      "markdownOnly": []
+    },
+    "imprint": {
+      "xlsx": 26,
+      "markdown": 26,
+      "common": 26,
+      "xlsxOnly": [],
+      "markdownOnly": []
+    },
+    "expansions": {}
+  },
+  "issues": [
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "martial 「常规攻击」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「七星灯续命阵」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「三尸神暴走」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「业火红莲」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「二十八宿阵」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「五岳镇魂符」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「五芒星阵」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「八门遁甲阵」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「六丁六甲阵」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「六字大明遁」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「兵解飞剑」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「凝爆」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「北斗封魔钉」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「北欧卢恩阵」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「四象阵」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「天罗地网」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「天罡北斗阵」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「奇门遁甲阵」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「形意八极」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「德鲁伊树阵」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「所罗门六芒星阵」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「扶褉术」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「挪转术」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「撒豆成兵阵」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「曼陀罗阵」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「灵迹」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「烈光炮」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「热狂术」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「熊神之力」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「玛雅血祭阵」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「电闪」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「瘟疫之舞」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「盂兰鬼门」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「祖灵战歌」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「血傩替身咒」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「血月诅咒」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「西乌洛波洛斯炼成阵」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「超感」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「金刚缚魔印」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「阴兵借道」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「阴封咒」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「阿努比斯冥阵」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「雪狼魂」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「雷池阵」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「雷祖召来」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「雹坠」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「霞光击」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「霞炎破」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「霞飞炎」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「骨卜反噬」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「鹰灵附体」仅存在于 xlsx（可能为扩展或较新内容）"
+    },
+    {
+      "level": "info",
+      "kind": "xlsx-only",
+      "message": "spell 「黄泉九幽阵」仅存在于 xlsx（可能为扩展或较新内容）"
+    }
+  ]
+}

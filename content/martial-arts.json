@@ -1,0 +1,957 @@
+{
+    "kind": "martial",
+    "items": [
+        {
+            "id": "martial.常规攻击",
+            "kind": "martial",
+            "name": "常规攻击",
+            "expansion": null,
+            "category": null,
+            "cost": "无",
+            "target": "单一",
+            "support": true,
+            "secret": false,
+            "effect": "检定成功时，对目标造成【物理伤害】。",
+            "flavor": "使用拳脚或武器进行一次常规的攻击。",
+            "source": {
+                "sheet": "武技",
+                "row": 4
+            }
+        },
+        {
+            "id": "martial.转掌",
+            "kind": "martial",
+            "name": "转掌",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": false,
+            "secret": false,
+            "effect": "选择反击时进行的攻击检定获得2枚加骰，检定成功时，对自身造成【强化攻击】。",
+            "flavor": "步伐如圆转流水，侧移防御攻势的同时调整身位，蓄势反击。",
+            "source": {
+                "sheet": "武技",
+                "row": 5
+            }
+        },
+        {
+            "id": "martial.云手受",
+            "kind": "martial",
+            "name": "云手受",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": false,
+            "secret": false,
+            "effect": "选择反击时进行的攻击检定获得4枚加骰，检定成功时，对目标造成【物理伤害】。",
+            "flavor": "云手化劲，格挡瞬间借力反击，行云流水无隙可乘。",
+            "source": {
+                "sheet": "武技",
+                "row": 6
+            }
+        },
+        {
+            "id": "martial.太极云手",
+            "kind": "martial",
+            "name": "太极云手",
+            "expansion": null,
+            "category": null,
+            "cost": "1点灵力值",
+            "target": "单一",
+            "support": false,
+            "secret": false,
+            "effect": "选择反击时进行的攻击检定获得1枚加骰，检定成功时，对自身造成【恢复灵力1】。",
+            "flavor": "以柔克刚，借力化劲，使敌方攻击方向偏移，卸掉劲力。",
+            "source": {
+                "sheet": "武技",
+                "row": 7
+            }
+        },
+        {
+            "id": "martial.鬼步",
+            "kind": "martial",
+            "name": "鬼步",
+            "expansion": null,
+            "category": null,
+            "cost": "1点灵力值",
+            "target": "单一",
+            "support": true,
+            "secret": false,
+            "effect": "选择反击时进行的攻击检定获得1枚加骰，检定成功时，对目标造成【物理伤害1】。",
+            "flavor": "步法如鬼影迷踪，落步似虚若实。",
+            "source": {
+                "sheet": "武技",
+                "row": 8
+            }
+        },
+        {
+            "id": "martial.霞构",
+            "kind": "martial",
+            "name": "霞构",
+            "expansion": null,
+            "category": null,
+            "cost": "1点灵力值",
+            "target": "单一",
+            "support": true,
+            "secret": false,
+            "effect": "检定成功时，对目标造成【物理伤害】+对自身【霞构】。\n【霞构】：【非瞬间效果】【正面】你选择反击进行的攻击检定获得1枚加骰。",
+            "flavor": "摆出虚实难辨的防御架势，诱敌冒进，伺机反制其破绽。",
+            "source": {
+                "sheet": "武技",
+                "row": 9
+            }
+        },
+        {
+            "id": "martial.无想剑",
+            "kind": "martial",
+            "name": "无想剑",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": true,
+            "secret": false,
+            "effect": "检定成功时，对目标造成【物理伤害2】+对自身造成【无想剑】。\n【无想剑】：【非瞬间效果】【正面】你下次施展武技进行攻击检定的定骰视掷出19，然后结束本效果。",
+            "flavor": "摒弃杂念进入无我之境，心神合一锁定敌之破绽，下一击必中要害。",
+            "source": {
+                "sheet": "武技",
+                "row": 10
+            }
+        },
+        {
+            "id": "martial.铁骑当",
+            "kind": "martial",
+            "name": "铁骑当",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": true,
+            "secret": false,
+            "effect": "检定成功时，对目标造成【物理伤害】+对自身造成【铁壁】。\n【铁壁】：【非瞬间效果】【正面】其他生物对你施展武技进行攻击检定成功时获得的成功等级减少2个，你施展武技进行攻击检定的成功等级增加2个。",
+            "flavor": "沉腰立马如铁骑磐石，降低重心抵御冲撞，稳若山岳。",
+            "source": {
+                "sheet": "武技",
+                "row": 11
+            }
+        },
+        {
+            "id": "martial.天罡步",
+            "kind": "martial",
+            "name": "天罡步",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": false,
+            "secret": false,
+            "effect": "进行攻击检定获得1枚加骰，该次攻击的目标无法选择反击，检定成功时，对目标造成【物理伤害】。",
+            "flavor": "踏北斗七星位，行动轨迹难以预测。",
+            "source": {
+                "sheet": "武技",
+                "row": 12
+            }
+        },
+        {
+            "id": "martial.瞬剑斩",
+            "kind": "martial",
+            "name": "瞬剑斩",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": true,
+            "secret": false,
+            "effect": "检定成功时，对目标造成【物理伤害】+如果目标具有【物理易伤】则额外造成【物理伤害2】。",
+            "flavor": "刀不出鞘则静若深渊，出鞘刹那寒光裂空，以极致速度完成一击必杀。",
+            "source": {
+                "sheet": "武技",
+                "row": 13
+            }
+        },
+        {
+            "id": "martial.血怒",
+            "kind": "martial",
+            "name": "血怒",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": false,
+            "secret": false,
+            "effect": "检定成功时，对目标造成【物理伤害】+如果你已损失生命值，额外造成【火焰伤害2】。",
+            "flavor": "伤痛激发狂暴血性，伤势越重则战意越凶，以血还血以命搏命。",
+            "source": {
+                "sheet": "武技",
+                "row": 14
+            }
+        },
+        {
+            "id": "martial.胧月夜",
+            "kind": "martial",
+            "name": "胧月夜",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": true,
+            "secret": false,
+            "effect": "检定成功时，对目标造成【物理伤害2】。\n成功等级≥2时，再对目标造成2次【物理伤害1】。",
+            "flavor": "剑影如胧月倾泻，虚实交替的连续斩击封锁敌人进退之路。",
+            "source": {
+                "sheet": "武技",
+                "row": 15
+            }
+        },
+        {
+            "id": "martial.般若掌",
+            "kind": "martial",
+            "name": "般若掌",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": false,
+            "secret": false,
+            "effect": "该攻击检定承受5点减值，检定成功时，对目标造成【物理伤害2】+【灵识伤害2】。",
+            "flavor": "内力凝于掌心，掌风如浪潮般汹涌外放，三丈内隔空伤敌。",
+            "source": {
+                "sheet": "武技",
+                "row": 16
+            }
+        },
+        {
+            "id": "martial.逆卷刃",
+            "kind": "martial",
+            "name": "逆卷刃",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": true,
+            "secret": false,
+            "effect": "检定成功时，对目标造成【物理伤害】+如果目标本轮已进行过行动，额外造成【冰霜伤害2】。",
+            "flavor": "刀势骤转，反手逆劈如逆浪回卷，攻敌不备之死角。",
+            "source": {
+                "sheet": "武技",
+                "row": 17
+            }
+        },
+        {
+            "id": "martial.雷霆劈",
+            "kind": "martial",
+            "name": "雷霆劈",
+            "expansion": null,
+            "category": null,
+            "cost": "3点灵力值",
+            "target": "单一",
+            "support": true,
+            "secret": false,
+            "effect": "检定成功时，对目标造成【物理伤害】+【雷电伤害】。",
+            "flavor": "双手持剑蓄力重劈，如雷霆贯地，刚猛劲力可碎金石。",
+            "source": {
+                "sheet": "武技",
+                "row": 18
+            }
+        },
+        {
+            "id": "martial.符剑术",
+            "kind": "martial",
+            "name": "符剑术",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": false,
+            "secret": false,
+            "effect": "检定成功时，对目标造成【物理伤害1】+如果目标是鬼魂，对目标额外造成【灵识伤害3】。",
+            "flavor": "以剑为笔凌空画符，剑气裹挟破邪之力，专克阴邪之物。",
+            "source": {
+                "sheet": "武技",
+                "row": 19
+            }
+        },
+        {
+            "id": "martial.形意虎扑炮锤",
+            "kind": "martial",
+            "name": "形意虎扑炮锤",
+            "expansion": null,
+            "category": null,
+            "cost": "3点灵力值",
+            "target": "单一",
+            "support": true,
+            "secret": false,
+            "effect": "检定成功时，对目标造成【物理伤害】+【物理伤害】。",
+            "flavor": "仿猛虎扑食之势，双手成爪虚晃，突然以肘击直取心窝，附带内劲穿透。",
+            "source": {
+                "sheet": "武技",
+                "row": 20
+            }
+        },
+        {
+            "id": "martial.八步赶蝉",
+            "kind": "martial",
+            "name": "八步赶蝉",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": false,
+            "secret": false,
+            "effect": "检定成功时，对目标造成【物理伤害1】+你可以额外消耗（X）点灵力点（X最大为5，最小为1）对目标造成【物理伤害X】。",
+            "flavor": "瞬间突进，如飞蝉掠空，快速突破重重包围，取敌首级。",
+            "source": {
+                "sheet": "武技",
+                "row": 21
+            }
+        },
+        {
+            "id": "martial.醉仙望月",
+            "kind": "martial",
+            "name": "醉仙望月",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": false,
+            "secret": false,
+            "effect": "检定成功时，对目标造成【物理伤害3】。",
+            "flavor": "步伐踉跄如醉汉望月，身形摇晃间暗藏杀机，诱敌轻敌后骤然发难。",
+            "source": {
+                "sheet": "武技",
+                "row": 22
+            }
+        },
+        {
+            "id": "martial.骗击",
+            "kind": "martial",
+            "name": "骗击",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": true,
+            "secret": false,
+            "effect": "如果目标选择反击，进行的攻击检定获得3枚加骰。检定成功时，对目标造成【物理伤害】。",
+            "flavor": "虚招佯攻诱敌防御，骤然变招直取破绽，虚实交错间克敌制胜。",
+            "source": {
+                "sheet": "武技",
+                "row": 23
+            }
+        },
+        {
+            "id": "martial.天地摔",
+            "kind": "martial",
+            "name": "天地摔",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": false,
+            "secret": false,
+            "effect": "检定成功时，对目标造成【物理伤害2】+对目标造成【失衡】+对自身造成【失衡】。\n【失衡】：【非瞬间效果】【负面】你下次受到【物理伤害】时，对你造成【物理伤害1】，然后终止本效果。",
+            "flavor": "借敌之力破坏其重心，如天地倒悬般将敌摔落，致其筋骨失衡。",
+            "source": {
+                "sheet": "武技",
+                "row": 24
+            }
+        },
+        {
+            "id": "martial.形意鹰捉劈挂",
+            "kind": "martial",
+            "name": "形意鹰捉劈挂",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": true,
+            "secret": false,
+            "effect": "目标选择防御时，进行的攻击检定获得3枚加骰。检定成功时，对目标造成【物理伤害】。",
+            "flavor": "如鹰隼擒拿，先以爪功缩敌关节，再衔接劈掌砸击，专破防守姿态。",
+            "source": {
+                "sheet": "武技",
+                "row": 25
+            }
+        },
+        {
+            "id": "martial.影舞乱花",
+            "kind": "martial",
+            "name": "影舞乱花",
+            "expansion": null,
+            "category": null,
+            "cost": "1点灵力值",
+            "target": "1~3个",
+            "support": false,
+            "secret": false,
+            "effect": "检定成功时，对目标造成【清除效果】。",
+            "flavor": "忍步疾走间双手飞扬，飞镖、铁蒺藜如乱花骤雨，封敌进退之路。",
+            "source": {
+                "sheet": "武技",
+                "row": 26
+            }
+        },
+        {
+            "id": "martial.九转还丹劲",
+            "kind": "martial",
+            "name": "九转还丹劲",
+            "expansion": null,
+            "category": null,
+            "cost": "3点灵力值",
+            "target": "单一",
+            "support": false,
+            "secret": false,
+            "effect": "进行攻击检定获得3枚加骰。检定成功时，对目标造成【物理伤害】+对自身造成【恢复】。",
+            "flavor": "受伤后运转周天，缓慢恢复体力。",
+            "source": {
+                "sheet": "武技",
+                "row": 27
+            }
+        },
+        {
+            "id": "martial.蛇咬",
+            "kind": "martial",
+            "name": "蛇咬",
+            "expansion": null,
+            "category": null,
+            "cost": "1点灵力值",
+            "target": "单一",
+            "support": false,
+            "secret": false,
+            "effect": "检定成功时，对目标造成【物理伤害】+【灵蛇毒】。\n【灵蛇毒】：【非瞬间效果】【负面】你消耗灵力值时，对你造成【灵识伤害1】，然后终止本效果。",
+            "flavor": "出手时如蛇信吐芯，专取敌人关节、颈侧等要害。",
+            "source": {
+                "sheet": "武技",
+                "row": 28
+            }
+        },
+        {
+            "id": "martial.残影",
+            "kind": "martial",
+            "name": "残影",
+            "expansion": null,
+            "category": null,
+            "cost": "3点灵力值",
+            "target": "单一",
+            "support": false,
+            "secret": false,
+            "effect": "检定成功时，对目标造成【物理伤害】+对自身【强化防御1】+创造场景标签【残影】。",
+            "flavor": "攻击时留下残影",
+            "source": {
+                "sheet": "武技",
+                "row": 29
+            }
+        },
+        {
+            "id": "martial.浴血",
+            "kind": "martial",
+            "name": "浴血",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": false,
+            "secret": false,
+            "effect": "进行攻击检定获得X枚加骰（X=已损失生命值/2（向下取整）），检定成功时，对目标造成【物理伤害】。",
+            "flavor": "以伤换势，血脉逆行仿佛沸腾。",
+            "source": {
+                "sheet": "武技",
+                "row": 30
+            }
+        },
+        {
+            "id": "martial.瞬身击",
+            "kind": "martial",
+            "name": "瞬身击",
+            "expansion": null,
+            "category": null,
+            "cost": "1点灵力值",
+            "target": "1~3个",
+            "support": true,
+            "secret": false,
+            "effect": "检定成功时，对目标造成【物理伤害】。",
+            "flavor": "灵识汇聚足下，瞬间欺进敌身。",
+            "source": {
+                "sheet": "武技",
+                "row": 31
+            }
+        },
+        {
+            "id": "martial.凿金功",
+            "kind": "martial",
+            "name": "凿金功",
+            "expansion": null,
+            "category": null,
+            "cost": "3点灵力值",
+            "target": "单一",
+            "support": false,
+            "secret": false,
+            "effect": "检定成功时，对目标造成【物理伤害】+【赋予物理易伤】+【赋予灵识易伤】。",
+            "flavor": "灵识聚于一处洞穿坚甲，让敌手如遭重锤凿击。",
+            "source": {
+                "sheet": "武技",
+                "row": 32
+            }
+        },
+        {
+            "id": "martial.虎啸",
+            "kind": "martial",
+            "name": "虎啸",
+            "expansion": null,
+            "category": null,
+            "cost": "1点灵力值",
+            "target": "单一",
+            "support": false,
+            "secret": false,
+            "effect": "检定成功时，对目标造成【雷电伤害】+【赋予雷电易伤】。",
+            "flavor": "以迅猛的力量突破空气，伴随着震耳欲聋的空气爆破声产生巨大的冲击力。",
+            "source": {
+                "sheet": "武技",
+                "row": 33
+            }
+        },
+        {
+            "id": "martial.轮华",
+            "kind": "martial",
+            "name": "轮华",
+            "expansion": null,
+            "category": null,
+            "cost": "3点灵力值",
+            "target": "单一",
+            "support": false,
+            "secret": false,
+            "effect": "你猜测选择的目标是选择防御还是反击（在目标选择防御或反击后再公布结果），如果目标的选择与你的猜测相同，你进行的攻击检定获得3枚加骰，检定成功时，对目标造成【物理伤害】+【物理伤害1】。",
+            "flavor": "提前预判敌人的状态，虚则实之，实则虚之。",
+            "source": {
+                "sheet": "武技",
+                "row": 34
+            }
+        },
+        {
+            "id": "martial.破军",
+            "kind": "martial",
+            "name": "破军",
+            "expansion": null,
+            "category": null,
+            "cost": "3点灵力值",
+            "target": "单一",
+            "support": true,
+            "secret": false,
+            "effect": "检定成功时，对目标造成【物理伤害】+【削弱防御1】。\n如果【成功等级】≥2，你可以对另外一个目标造成同样的【效果】（直接使用相同的成功等级）。",
+            "flavor": "凝聚着强大的力量，能够一击穿透众多敌人的防御。",
+            "source": {
+                "sheet": "武技",
+                "row": 35
+            }
+        },
+        {
+            "id": "martial.灵犀指",
+            "kind": "martial",
+            "name": "灵犀指",
+            "expansion": null,
+            "category": null,
+            "cost": "3点灵力值",
+            "target": "单一",
+            "support": true,
+            "secret": false,
+            "effect": "检定成功时，对目标造成【灵识伤害】+【恍惚】。\n【恍惚】：【非瞬间效果】【负面】你进行行动检定时无法激活标签。",
+            "flavor": "集中全身灵力于一指之上，在瞬间封锁敌人的灵识运转，使其动弹不得。",
+            "source": {
+                "sheet": "武技",
+                "row": 36
+            }
+        },
+        {
+            "id": "martial.气转",
+            "kind": "martial",
+            "name": "气转",
+            "expansion": null,
+            "category": null,
+            "cost": "3点灵力值",
+            "target": "单一",
+            "support": true,
+            "secret": false,
+            "effect": "检定成功时，对目标造成【物理伤害】+对自身造成【恢复1】+对自身造成【增加灵力1】。",
+            "flavor": "你凝聚起特殊的能量，在你自身和敌人之间流转。当你伤害你的敌人时，同时能够恢复自身。",
+            "source": {
+                "sheet": "武技",
+                "row": 37
+            }
+        },
+        {
+            "id": "martial.斩破空",
+            "kind": "martial",
+            "name": "斩破空",
+            "expansion": null,
+            "category": null,
+            "cost": "1点灵力值",
+            "target": "单一",
+            "support": true,
+            "secret": false,
+            "effect": "该武技进行的攻击检定无法被反击。\n检定成功时，你投掷4枚D4,对目标造成X次【灵识伤害1】（X为你投掷D4骰值为3~4的数量）。",
+            "flavor": "你以极快的速度劈斩，以此将一股能量扭结成一道冲击波袭向敌人。",
+            "source": {
+                "sheet": "武技",
+                "row": 38
+            }
+        },
+        {
+            "id": "martial.迅击",
+            "kind": "martial",
+            "name": "迅击",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": false,
+            "secret": false,
+            "effect": "检定成功时，对目标造成【削弱防御】+【削弱防御】。",
+            "flavor": "向敌人发动快速连续的攻击。",
+            "source": {
+                "sheet": "武技",
+                "row": 39
+            }
+        },
+        {
+            "id": "martial.震荡威吓",
+            "kind": "martial",
+            "name": "震荡威吓",
+            "expansion": null,
+            "category": null,
+            "cost": "3点灵力值",
+            "target": "单一",
+            "support": true,
+            "secret": false,
+            "effect": "检定成功时，对目标造成【物理伤害】+对目标造成【受惊】+对自身【清除效果1】。\n【受惊】：【非瞬间效果】【负面】你选择防御时无法激活标签增加基础防御。",
+            "flavor": "你用力猛击地面，造成小范围地震效果。",
+            "source": {
+                "sheet": "武技",
+                "row": 40
+            }
+        },
+        {
+            "id": "martial.影袭",
+            "kind": "martial",
+            "name": "影袭",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": true,
+            "secret": false,
+            "effect": "检定成功时，对目标造成【物理伤害】+对自身【强化攻击】。",
+            "flavor": "你像敌人的影子一般无法甩脱，绕至敌人身后并对其进行袭击。",
+            "source": {
+                "sheet": "武技",
+                "row": 41
+            }
+        },
+        {
+            "id": "martial.形意龙形崩山靠",
+            "kind": "martial",
+            "name": "形意龙形崩山靠",
+            "expansion": null,
+            "category": null,
+            "cost": "1点灵力值",
+            "target": "单一",
+            "support": true,
+            "secret": true,
+            "effect": "检定成功时，对目标造成【物理伤害】+对目标造成【清除效果】。",
+            "flavor": "身如游龙突进，近身时以肩、肘、胯合力冲撞，如巨浪拍岸，可击退敌人并破坏架势。",
+            "source": {
+                "sheet": "武技",
+                "row": 42
+            }
+        },
+        {
+            "id": "martial.雷霆贯",
+            "kind": "martial",
+            "name": "雷霆贯",
+            "expansion": null,
+            "category": null,
+            "cost": "4点灵力值",
+            "target": "单一",
+            "support": true,
+            "secret": true,
+            "effect": "检定成功时，对目标造成【物理伤害】+【灵识伤害1】+【削弱攻击2】。",
+            "flavor": "半步冲刺，拳如电发，击中时劲力透体，可造成内脏震荡。",
+            "source": {
+                "sheet": "武技",
+                "row": 43
+            }
+        },
+        {
+            "id": "martial.五行连环炮",
+            "kind": "martial",
+            "name": "五行连环炮",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": false,
+            "secret": true,
+            "effect": "检定成功时，若【成功等级】≥2，对目标造成【物理伤害1】+【灵识伤害1】+【火焰伤害1】+【冰霜伤害1】+【雷电伤害1】。",
+            "flavor": "劈、崩、钻、炮、横五拳连环，配合八极短打，形成密不透风的近身压制。",
+            "source": {
+                "sheet": "武技",
+                "row": 44
+            }
+        },
+        {
+            "id": "martial.六字真言咒",
+            "kind": "martial",
+            "name": "六字真言咒",
+            "expansion": null,
+            "category": null,
+            "cost": "1点灵力值",
+            "target": "单一",
+            "support": true,
+            "secret": true,
+            "effect": "检定成功时，若【成功等级】＞2，对目标造成【震慑】。\n【震慑】：【非瞬间效果】【负面】目标下次进行的行动检定投掷的定骰视为 2 点，然后终止本效果。",
+            "flavor": "喝出「唵嘛呢叭咪吽」六字真言，音波震荡扰乱心神。",
+            "source": {
+                "sheet": "武技",
+                "row": 45
+            }
+        },
+        {
+            "id": "martial.形意马形冲阵步",
+            "kind": "martial",
+            "name": "形意马形冲阵步",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": true,
+            "secret": true,
+            "effect": "检定成功时，若【成功等级】≥2，对目标造成【破阵】。\n【破阵】：【非瞬间效果】【负面】你无法选择反击，以你为目标的攻击检定获得 1 枚加骰。",
+            "flavor": "直线突进，步法如烈马奔腾，强行突破敌方防线。",
+            "source": {
+                "sheet": "武技",
+                "row": 46
+            }
+        },
+        {
+            "id": "martial.形意蛇形缠丝劲",
+            "kind": "martial",
+            "name": "形意蛇形缠丝劲",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": false,
+            "secret": true,
+            "effect": "选择反击时进行攻击检定获得 1 枚加骰，检定成功时，对目标造成【赋予物理易伤 2】。",
+            "flavor": "近身绞缠敌臂，以柔制刚，化解攻势后瞬间反关节压制。",
+            "source": {
+                "sheet": "武技",
+                "row": 47
+            }
+        },
+        {
+            "id": "martial.柳絮随风势",
+            "kind": "martial",
+            "name": "柳絮随风势",
+            "expansion": null,
+            "category": null,
+            "cost": "3点灵力值",
+            "target": "单一",
+            "support": false,
+            "secret": true,
+            "effect": "检定成功时，对自身【随风行】。\n【随风行】：【非瞬间效果】【正面】你的基础防御翻倍。",
+            "flavor": "身体如同柳絮般，敌人越是凶猛的攻击越是无法触碰到你。",
+            "source": {
+                "sheet": "武技",
+                "row": 48
+            }
+        },
+        {
+            "id": "martial.冥动",
+            "kind": "martial",
+            "name": "冥动",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": true,
+            "secret": true,
+            "effect": "检定成功时，对自身造成【无实体】。\n【无实体】：【非瞬间效果】【正面】你受到【效果】时，如果该效果的【效果等级】＜2，该效果无法对你生效。",
+            "flavor": "你以超高速的移动使自己的身形变得虚幻不定，无法被捕捉。",
+            "source": {
+                "sheet": "武技",
+                "row": 49
+            }
+        },
+        {
+            "id": "martial.形意熊形震地跺",
+            "kind": "martial",
+            "name": "形意熊形震地跺",
+            "expansion": null,
+            "category": null,
+            "cost": "4点灵力值",
+            "target": "1~3个",
+            "support": false,
+            "secret": true,
+            "effect": "检定成功时，对目标造成【物理伤害 2】+【削弱防御2】。",
+            "flavor": "沉身跺脚，震地撼敌下盘，使周围敌人短暂失衡，同时蓄力准备后续连招。",
+            "source": {
+                "sheet": "武技",
+                "row": 50
+            }
+        },
+        {
+            "id": "martial.罗汉伏虎",
+            "kind": "martial",
+            "name": "罗汉伏虎",
+            "expansion": null,
+            "category": null,
+            "cost": "4点灵力值",
+            "target": "单一",
+            "support": false,
+            "secret": true,
+            "effect": "检定成功时，造成【压制】持续到你下次施展武技。\n【压制】：【非瞬间效果】【负面】你无法施展武技。",
+            "flavor": "近身锁扣关节，如罗汉降伏猛虎，令对手筋骨受制难以挣脱。",
+            "source": {
+                "sheet": "武技",
+                "row": 51
+            }
+        },
+        {
+            "id": "martial.形意鹞子钻天炮",
+            "kind": "martial",
+            "name": "形意鹞子钻天炮",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": true,
+            "secret": true,
+            "effect": "检定成功时，若【成功等级】≥3，对目标造成【封锁】。\n【封锁】：【非瞬间效果】【负面】你无法施展术法。",
+            "flavor": "低身防御后突然上冲，掌击下颌，如鹞子钻云，可致眩晕。",
+            "source": {
+                "sheet": "武技",
+                "row": 52
+            }
+        },
+        {
+            "id": "martial.点苍指",
+            "kind": "martial",
+            "name": "点苍指",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": false,
+            "secret": true,
+            "effect": "检定成功时，若【成功等级】≥2，对目标造成【断虚】。\n【断虚】：【非瞬间效果】【负面】你无法施展灵能力，也无法通过灵能力强化武技。",
+            "flavor": "快准狠的指法，命中可短暂封锁对手动作。",
+            "source": {
+                "sheet": "武技",
+                "row": 53
+            }
+        },
+        {
+            "id": "martial.金刚怒目",
+            "kind": "martial",
+            "name": "金刚怒目",
+            "expansion": null,
+            "category": null,
+            "cost": "6点灵力值",
+            "target": "单一",
+            "support": false,
+            "secret": true,
+            "effect": "检定成功时，对目标造成【物理伤害】+【物理伤害】+【物理伤害】。",
+            "flavor": "拳出如金刚震怒，刚猛劲力直透心神，令敌胆寒。",
+            "source": {
+                "sheet": "武技",
+                "row": 54
+            }
+        },
+        {
+            "id": "martial.残心无念",
+            "kind": "martial",
+            "name": "残心无念",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": false,
+            "secret": true,
+            "effect": "检定成功时，对目标造成【物理伤害 1】+对自身【剑圣姿态】持续到你使用不带有【剑】的武技（原本描述或名称中附带【剑】）或者你离开当前场景。\n【剑圣姿态】：【非瞬间效果】【正面】你施展原本名字带有【剑】的武技进行的攻击检定获得 2 枚加骰。",
+            "flavor": "心剑合一，摒弃杂念，在极致专注中洞察敌之破绽，以静制动一击反杀。",
+            "source": {
+                "sheet": "武技",
+                "row": 55
+            }
+        },
+        {
+            "id": "martial.炁贯百会",
+            "kind": "martial",
+            "name": "炁贯百会",
+            "expansion": null,
+            "category": null,
+            "cost": "4点灵力值",
+            "target": "单一",
+            "support": true,
+            "secret": true,
+            "effect": "检定成功时，对目标造成【物理伤害】+若【成功等级】≥2，对自身造成【强化攻击 3】+对自身造成【削弱防御 2】。",
+            "flavor": "道家发明的呼吸法，调息聚气，短时间内提升爆发力。",
+            "source": {
+                "sheet": "武技",
+                "row": 56
+            }
+        },
+        {
+            "id": "martial.拈花指",
+            "kind": "martial",
+            "name": "拈花指",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": true,
+            "secret": true,
+            "effect": "检定成功时，对目标造成【赋予物理易伤】+【失衡】。\n【失衡】：【非瞬间效果】【负面】你下次受到【物理伤害】时，对你造成【物理伤害 1】，然后终止本效果。",
+            "flavor": "指尖蕴柔劲，触敌刹那借力化劲，以巧破蛮力，反制攻势。",
+            "source": {
+                "sheet": "武技",
+                "row": 57
+            }
+        },
+        {
+            "id": "martial.金钟罩",
+            "kind": "martial",
+            "name": "金钟罩",
+            "expansion": null,
+            "category": null,
+            "cost": "2点灵力值",
+            "target": "单一",
+            "support": true,
+            "secret": true,
+            "effect": "检定成功时，对目标造成【物理伤害 1】+对自身造成【获得物理抗性 3】。",
+            "flavor": "硬接攻击，靠着横练体魄强行打断对方攻势。",
+            "source": {
+                "sheet": "武技",
+                "row": 58
+            }
+        },
+        {
+            "id": "martial.形意鼍形翻浪劲",
+            "kind": "martial",
+            "name": "形意鼍形翻浪劲",
+            "expansion": null,
+            "category": null,
+            "cost": "4点灵力值",
+            "target": "单一",
+            "support": false,
+            "secret": true,
+            "effect": "检定成功时，对目标造成【物理伤害 3】+对自身造成【获得物理抗性 2】+【获得灵识抗性 2】+【获得火焰抗性 2】+【获得雷电抗性 2】+【获得冰霜抗性 2】。",
+            "flavor": "双臂如鼍翻浪，格挡同时反手抽打，攻防一体。",
+            "source": {
+                "sheet": "武技",
+                "row": 59
+            }
+        }
+    ]
+}

@@ -1,0 +1,485 @@
+{
+  "kind": "bond",
+  "items": [
+    {
+      "id": "bond.家族.族誉",
+      "kind": "bond",
+      "category": "家族",
+      "roll": 1,
+      "name": "族誉",
+      "description": "你的家族在狩魂界中颇有威望，作为一个狩魂者家族，你和你的家人都将这份责任作为最崇高使命执行，而你的行为也总是遵循着家族的教诲。",
+      "expansion": null,
+      "experienceTag": ""
+    },
+    {
+      "id": "bond.家族.衣钵",
+      "kind": "bond",
+      "category": "家族",
+      "roll": 2,
+      "name": "衣钵",
+      "description": "你在一次整理家族遗物的活动中，得知你久远的祖上曾经有人担任过狩魂者。你继承了这份遗产，希望能够追寻先人的足迹。",
+      "expansion": null,
+      "experienceTag": ""
+    },
+    {
+      "id": "bond.家族.家学",
+      "kind": "bond",
+      "category": "家族",
+      "roll": 3,
+      "name": "家学",
+      "description": "你出生于一个具有狩魂知识体系的家族，从小浸润在家学环境中，被灌输了家族独特的思想、世界观和价值观，看待灵体和狩魂的方式也带有强烈的家族烙印。",
+      "expansion": null,
+      "experienceTag": ""
+    },
+    {
+      "id": "bond.家族.族宝",
+      "kind": "bond",
+      "category": "家族",
+      "roll": 4,
+      "name": "族宝",
+      "description": "你的家族拥有一件（或一套）具有特殊力量的核心器物/族宝，其存在与家族的命运紧密交织。族宝的力量是家族的依仗，但其带来力量与庇护的同时，也必然伴随着沉重的代价，这个代价也将伴随你的一生。",
+      "expansion": null,
+      "experienceTag": ""
+    },
+    {
+      "id": "bond.家族.镇厄",
+      "kind": "bond",
+      "category": "家族",
+      "roll": 5,
+      "name": "镇厄",
+      "description": "你的家族世代守护着一个邪恶存在的封印，你也即将继承这一使命。为了对抗这个邪恶存在——无论是维持这个封印，或是以防万一要与之战斗，你都必须增强自己的实力。",
+      "expansion": null,
+      "experienceTag": ""
+    },
+    {
+      "id": "bond.家族.遗志",
+      "kind": "bond",
+      "category": "家族",
+      "roll": 6,
+      "name": "遗志",
+      "description": "你的家人向你揭露了他们作为狩魂者期间秘密进行的一项远大任务，现在这份责任交到你的手上，你承诺要继续完成他们未能完成的这项任务。",
+      "expansion": null,
+      "experienceTag": ""
+    },
+    {
+      "id": "bond.家族.复兴",
+      "kind": "bond",
+      "category": "家族",
+      "roll": 7,
+      "name": "复兴",
+      "description": "你的家族曾经在狩魂界中极具名望，但一次意外或误会导致你的家族名誉受损，你认为必须恢复自己家族的荣光——以一个出色的狩魂者的身份。",
+      "expansion": null,
+      "experienceTag": ""
+    },
+    {
+      "id": "bond.家族.血仇",
+      "kind": "bond",
+      "category": "家族",
+      "roll": 8,
+      "name": "血仇",
+      "description": "你的家族毁于一个强大的敌人之手。作为家族中唯一的幸存者，你必须找到你家族的仇人，并为你的族人报仇雪恨。",
+      "expansion": null,
+      "experienceTag": ""
+    },
+    {
+      "id": "bond.关系.引路",
+      "kind": "bond",
+      "category": "关系",
+      "roll": 1,
+      "name": "引路",
+      "description": "你被意外卷入一次狩魂活动中，但幸运得到了一位强劲的狩魂者的帮助。通过他，你了解到狩魂界，为了能够成为和他一样的人，你开始进行自我训练。",
+      "expansion": null,
+      "experienceTag": ""
+    },
+    {
+      "id": "bond.关系.孽缘",
+      "kind": "bond",
+      "category": "关系",
+      "roll": 2,
+      "name": "孽缘",
+      "description": "你和你一位重要之人失去了联系，你发现他的失踪和灵异现象或神秘事件有关。在寻找他的过程中你逐渐觉醒了灵识，并成为一名狩魂者。",
+      "expansion": null,
+      "experienceTag": ""
+    },
+    {
+      "id": "bond.关系.仰慕",
+      "kind": "bond",
+      "category": "关系",
+      "roll": 3,
+      "name": "仰慕",
+      "description": "你被一位优雅的狩魂者所吸引，为了引起他的注意并尽可能接近他，你正努力地成为一位能够与他并肩的狩魂者。",
+      "expansion": null,
+      "experienceTag": "你因效仿偶像从而得知一些狩魂者技巧"
+    },
+    {
+      "id": "bond.关系.劲敌",
+      "kind": "bond",
+      "category": "关系",
+      "roll": 4,
+      "name": "劲敌",
+      "description": "你拥有一位好敌手，你们相互追赶、相互较量，以此推进着彼此的进步。为了不让他失望，你必须成为一个更出色的狩魂者。",
+      "expansion": null,
+      "experienceTag": "你能够预判一些鬼怪的行动"
+    },
+    {
+      "id": "bond.关系.再会",
+      "kind": "bond",
+      "category": "关系",
+      "roll": 5,
+      "name": "再会",
+      "description": "你曾经遇到一位友善但神秘的“鬼魂老师”，他教导并呵护着你度过幼年时光。为了不负他的恩惠，你成为狩魂者，同时也暗自期待能在某处与他再次重遇。",
+      "expansion": null,
+      "experienceTag": "你了解一些阴阳界的知识"
+    },
+    {
+      "id": "bond.关系.师承",
+      "kind": "bond",
+      "category": "关系",
+      "roll": 6,
+      "name": "师承",
+      "description": "你受到一位狩魂者前辈的青睐，他将他的技艺和智慧对你倾囊相授，并希望你愿意成为他的弟子或接班人。",
+      "expansion": null,
+      "experienceTag": "你拥有一些独门的狩魂者技艺"
+    },
+    {
+      "id": "bond.关系.道义",
+      "kind": "bond",
+      "category": "关系",
+      "roll": 7,
+      "name": "道义",
+      "description": "你对一个善良的游魂承诺，会拯救和帮助与他遭遇相似的人。为了不背叛这份信任，你迫使自己变得更加优秀。",
+      "expansion": null,
+      "experienceTag": "你了解一些普通魂魄的知识"
+    },
+    {
+      "id": "bond.关系.救赎",
+      "kind": "bond",
+      "category": "关系",
+      "roll": 8,
+      "name": "救赎",
+      "description": "你的挚友因神秘事件而丧生，为了不让其他人经历与你相同的痛楚，你痛定思痛，肩负起狩魂者的责任，决心守护这片土地。",
+      "expansion": null,
+      "experienceTag": "你知道如何从尸体上提取诡异信息"
+    },
+    {
+      "id": "bond.宿命.因果",
+      "kind": "bond",
+      "category": "宿命",
+      "roll": 1,
+      "name": "因果",
+      "description": "你在觉醒能力时，看到了自己前世的记忆碎片。你发现一个极其强大、狡猾的恶灵跨越了轮回，在每一世都与你纠缠，并造成了你重要之人的悲剧。这一世，你带着宿慧觉醒，就是为了终结这场跨越生死的追杀。但对方同样知晓你的存在，并布下了针对你前世弱点的陷阱。",
+      "expansion": null,
+      "experienceTag": "你了解一些转世轮回的知识"
+    },
+    {
+      "id": "bond.宿命.业报",
+      "kind": "bond",
+      "category": "宿命",
+      "roll": 2,
+      "name": "业报",
+      "description": "你是一个曾被狩魂者超度的鬼魂的转生。在你的前世记忆逐渐觉醒后，你认为这项使命意义非凡，因此你加入这个行列，希望可以帮助像曾经的你一样的人。",
+      "expansion": null,
+      "experienceTag": "你知晓一些超度鬼魂的知识"
+    },
+    {
+      "id": "bond.宿命.天命",
+      "kind": "bond",
+      "category": "宿命",
+      "roll": 3,
+      "name": "天命",
+      "description": "你是狩魂者与超自然存在的奇迹结晶。因此你一直认为，守护这个世界的安宁，为两边的世界充当调停者，就是你天生的责任。",
+      "expansion": null,
+      "experienceTag": "你知晓人间界与阴阳界穿行的知识"
+    },
+    {
+      "id": "bond.宿命.天赋",
+      "kind": "bond",
+      "category": "宿命",
+      "roll": 4,
+      "name": "天赋",
+      "description": "你从小因为你与生俱来的奇异能力而备受困扰。直到你成为狩魂者之后，你终于知道这份能力的正确用途，这并非诅咒，而是一份可以帮助到别人的力量。",
+      "expansion": null,
+      "experienceTag": "你知晓一些灵能力原理"
+    },
+    {
+      "id": "bond.宿命.追寻",
+      "kind": "bond",
+      "category": "宿命",
+      "roll": 5,
+      "name": "追寻",
+      "description": "你失忆了，但没有忘记如何使用你的灵能力，以及身为狩魂者的责任与身份。你在进行狩魂活动的同时也在尝试恢复记忆，希望能够借此想起有关自己的事。",
+      "expansion": null,
+      "experienceTag": "你在压力之下偶尔能够闪现出一些记忆碎片"
+    },
+    {
+      "id": "bond.宿命.悟道",
+      "kind": "bond",
+      "category": "宿命",
+      "roll": 6,
+      "name": "悟道",
+      "description": "在一次又一次的狩魂活动中，你见证了一个又一个被超度的灵魂，这使你能从新的角度去看待生命，为你正寻找的关于生命意义的谜题，提供新的答案。",
+      "expansion": null,
+      "experienceTag": "你学会用灵魂的视角看待事物"
+    },
+    {
+      "id": "bond.宿命.殊途",
+      "kind": "bond",
+      "category": "宿命",
+      "roll": 7,
+      "name": "殊途",
+      "description": "你备受命运愚弄，一位曾经的挚友已经成为你最可怕的敌人，而这段残酷宿命只能由你来亲手了断。",
+      "expansion": null,
+      "experienceTag": "你了解一些异常的预兆"
+    },
+    {
+      "id": "bond.宿命.抗争",
+      "kind": "bond",
+      "category": "宿命",
+      "roll": 8,
+      "name": "抗争",
+      "description": "一位强大的预言家预示你将成为战胜某个邪恶存在的关键。为了响应这一天的到来，你作为狩魂者进行着艰苦的修炼，以此提升自我。",
+      "expansion": null,
+      "experienceTag": "你了解一些天堂与地狱的秘闻"
+    },
+    {
+      "id": "bond.个性.正直",
+      "kind": "bond",
+      "category": "个性",
+      "roll": 1,
+      "name": "正直",
+      "description": "你的正义感和责任感是你作为狩魂者的唯一理由。你认为如果你不这么做，那么就等同于默认让更多的悲剧发生！",
+      "expansion": null,
+      "experienceTag": "你了解一些邪祟的伪装"
+    },
+    {
+      "id": "bond.个性.昭烈",
+      "kind": "bond",
+      "category": "个性",
+      "roll": 2,
+      "name": "昭烈",
+      "description": "你深入探索那些神秘事件，就是为了揭开奇案背后不为人知的真相，让那些无辜的受害者们沉冤得雪。",
+      "expansion": null,
+      "experienceTag": "你了解一些紧急时刻的应对方法"
+    },
+    {
+      "id": "bond.个性.理性",
+      "kind": "bond",
+      "category": "个性",
+      "roll": 3,
+      "name": "理性",
+      "description": "你对灵异现象和神秘事件近乎痴迷，你渴望以一种更加科学的方式，来记录、解释这些超自然存在，并希望以自己的智慧探索一种新的、更好的解决方式。",
+      "expansion": null,
+      "experienceTag": "你总能找到一些神秘事件的科学逻辑"
+    },
+    {
+      "id": "bond.个性.宣泄",
+      "kind": "bond",
+      "category": "个性",
+      "roll": 4,
+      "name": "宣泄",
+      "description": "重复单调的日常生活让你倍感压力，狩魂活动中的猎奇刺激可以让你暂时逃离日常——在解决灵异事件，让人们重新获得和平后，也会让你更有动力去面对生活。",
+      "expansion": null,
+      "experienceTag": "你了解一些如何处理负面能量的知识"
+    },
+    {
+      "id": "bond.个性.支撑",
+      "kind": "bond",
+      "category": "个性",
+      "roll": 5,
+      "name": "支撑",
+      "description": "你希望找到或重现一项失传已久的秘术。你认为那些灵魂必定知道一些相关的神秘知识，因此你也学会了如何聆听他们的心声。",
+      "expansion": null,
+      "experienceTag": "你偶尔能够听到一些神秘的声音"
+    },
+    {
+      "id": "bond.个性.修身",
+      "kind": "bond",
+      "category": "个性",
+      "roll": 6,
+      "name": "修身",
+      "description": "你持续狩猎和超度那些邪恶的存在，这不仅仅是为了帮助别人，更是为了证明自己。你仍在不断地这样做，借此测试自己的极限。",
+      "expansion": null,
+      "experienceTag": "你熟知一些凶煞的生存法则"
+    },
+    {
+      "id": "bond.个性.养德",
+      "kind": "bond",
+      "category": "个性",
+      "roll": 7,
+      "name": "养德",
+      "description": "你比任何人都更相信轮回与报应，你作为狩魂者并不追逐金钱与名利，而是为了更好地为自己积累阴德，渴望来世能够度过一个更好的人生。",
+      "expansion": null,
+      "experienceTag": "你了解一些阴德与福报的知识"
+    },
+    {
+      "id": "bond.个性.靖世",
+      "kind": "bond",
+      "category": "个性",
+      "roll": 8,
+      "name": "靖世",
+      "description": "狩魂界对你来说等同于另一个世界。随着你的视野不断拓宽，你了解到更多有别于人类文明的异界文化和传统。你希望以此作为切入点，寻求两者和平相处的方式。",
+      "expansion": null,
+      "experienceTag": "你知晓一些普通人听闻的异常事件"
+    },
+    {
+      "id": "bond.思潮.证明",
+      "kind": "bond",
+      "category": "思潮",
+      "roll": 1,
+      "name": "证明",
+      "description": "你拥抱死亡作为存在的证明或解脱。战斗是艺术，毁灭是美学，在终结中感受生命的极致。危险是你的伴侣。",
+      "expansion": null,
+      "experienceTag": "你了解一些鬼怪常用的能力"
+    },
+    {
+      "id": "bond.思潮.存在",
+      "kind": "bond",
+      "category": "思潮",
+      "roll": 2,
+      "name": "存在",
+      "description": "你在无意义的灵异恐怖中，挣扎定义自我存在的意义。每次猎杀都是对虚无的抗争，寻求在荒诞中建立个人价值与尊严。",
+      "expansion": null,
+      "experienceTag": "你了解一些边缘人相关的知识"
+    },
+    {
+      "id": "bond.思潮.好奇",
+      "kind": "bond",
+      "category": "思潮",
+      "roll": 3,
+      "name": "好奇",
+      "description": "驱动你的并非责任或正义，而是对灵界未知的无限好奇与探索欲。你渴望理解本质，揭开谜团，知识本身就是终极目标，道德是次要考量。",
+      "expansion": null,
+      "experienceTag": "你了解一些灵能力试验数据"
+    },
+    {
+      "id": "bond.思潮.秩序",
+      "kind": "bond",
+      "category": "思潮",
+      "roll": 4,
+      "name": "秩序",
+      "description": "你深信混乱（尤其是阴阳界的无序）是万恶之源。你追求建立或维护某种绝对的秩序、规则或结构，为此不惜铁腕手段，视灵活与混沌为敌。",
+      "expansion": null,
+      "experienceTag": "你了解一些狩魂界潜规则的秩序"
+    },
+    {
+      "id": "bond.思潮.痴迷",
+      "kind": "bond",
+      "category": "思潮",
+      "roll": 5,
+      "name": "痴迷",
+      "description": "你追求狩魂技艺本身的精进与完美。猎杀是验证、是修炼、是艺术的呈现。对手是磨刀石，目标是技艺的巅峰，道德与目的服务于技艺本身。",
+      "expansion": null,
+      "experienceTag": "你曾钻研过一些灵能力相关的知识"
+    },
+    {
+      "id": "bond.思潮.人性",
+      "kind": "bond",
+      "category": "思潮",
+      "roll": 6,
+      "name": "人性",
+      "description": "在非人力量的侵蚀下，你视守护人性为最高使命。你保护的不只是生命，更是人性之光不被灵异恐怖泯灭。",
+      "expansion": null,
+      "experienceTag": "你了解一些精神污染的知识"
+    },
+    {
+      "id": "bond.思潮.涅槃",
+      "kind": "bond",
+      "category": "思潮",
+      "roll": 7,
+      "name": "涅槃",
+      "description": "你背负着沉重的痛苦宿命。猎杀是苦修，是净化，是偿还。你追求的不是胜利，而是最终的解脱——灵魂的安宁或彻底地湮灭。",
+      "expansion": null,
+      "experienceTag": "你了解一些诅咒相关的知识"
+    },
+    {
+      "id": "bond.思潮.守护",
+      "kind": "bond",
+      "category": "思潮",
+      "roll": 8,
+      "name": "守护",
+      "description": "你的核心驱力是守护特定之人/之物/之地。这是你存在的锚点，力量之源，也是弱点。",
+      "expansion": null,
+      "experienceTag": "你了解一些用于防护的狩魂技巧"
+    },
+    {
+      "id": "bond.纽带.家乡",
+      "kind": "bond",
+      "category": "纽带",
+      "roll": 1,
+      "name": "家乡",
+      "description": "你生于斯长于斯，深爱着你的家乡及其居民。当灵异威胁开始侵扰这片土地，伤害你熟知的人们时，你挺身而出。成为狩魂者，是为了守护家园的宁静与邻里安全。",
+      "expansion": null,
+      "experienceTag": "你熟知家乡的各类传闻"
+    },
+    {
+      "id": "bond.纽带.传承",
+      "kind": "bond",
+      "category": "纽带",
+      "roll": 2,
+      "name": "传承",
+      "description": "你所珍视的独特文化传统、仪式或技艺正受到灵异力量的侵蚀或扭曲（如祭祀被邪灵干扰、传统工艺蕴含的灵力被滥用、圣地遭污染）。成为狩魂者，是为了保护这些文化瑰宝不被玷污或断绝。",
+      "expansion": null,
+      "experienceTag": "你熟知老旧传说当中的鬼怪"
+    },
+    {
+      "id": "bond.纽带.行业",
+      "kind": "bond",
+      "category": "纽带",
+      "roll": 3,
+      "name": "行业",
+      "description": "你所属的特定职业群体因其工作环境或历史原因，成为灵异事件高发目标。为了保护同行、维持行业存续，你掌握了对抗之力。成为狩魂者，是为了守护同袍的生命与行业的根基。",
+      "expansion": null,
+      "experienceTag": "你熟知职场上的鬼怪"
+    },
+    {
+      "id": "bond.纽带.网络",
+      "kind": "bond",
+      "category": "纽带",
+      "roll": 4,
+      "name": "网络",
+      "description": "你身处一个相互扶持的紧密社群。当社群成员因灵异事件接连遭遇不幸，群体濒临崩溃时，你承担起责任。成为狩魂者，是为了维系这份来之不易的互助纽带与集体安全。",
+      "expansion": null,
+      "experienceTag": "你熟知网络上的鬼怪"
+    },
+    {
+      "id": "bond.纽带.文化",
+      "kind": "bond",
+      "category": "纽带",
+      "roll": 5,
+      "name": "文化",
+      "description": "你所认同的特定文化圈层（如某个艺术社群、爱好者俱乐部、线上兴趣小组）因其聚集地、活动性质或成员特质，吸引了灵异威胁。为了保护“同好”和这个精神家园，你投身其中。成为狩魂者，是为了守护圈内伙伴与大家热爱的空间。",
+      "expansion": null,
+      "experienceTag": "你熟知亚文化圈层寄生的鬼怪"
+    },
+    {
+      "id": "bond.纽带.脆弱",
+      "kind": "bond",
+      "category": "纽带",
+      "roll": 6,
+      "name": "脆弱",
+      "description": "你身边环绕着相对脆弱、易受侵害的群体。目睹他们成为灵异目标却无力自保，激发了你的保护欲。",
+      "expansion": null,
+      "experienceTag": "你熟知灵体修炼的知识"
+    },
+    {
+      "id": "bond.纽带.共生",
+      "kind": "bond",
+      "category": "纽带",
+      "roll": 7,
+      "name": "共生",
+      "description": "你所处的社区/地域恰巧坐落于特殊的灵脉节点或历史悠久的灵异事件多发地。社区的存在与安危与这片土地的灵异平衡息息相关。成为狩魂者，是为了维持这种脆弱的共生关系。",
+      "expansion": null,
+      "experienceTag": "你熟知地缚灵相关知识"
+    },
+    {
+      "id": "bond.纽带.友人",
+      "kind": "bond",
+      "category": "纽带",
+      "roll": 8,
+      "name": "友人",
+      "description": "与你有着深厚羁绊的挚友、恩师被灵异所威胁，或灵异直接指向他们及其所处的环境时，成为狩魂者，是为了守护这份无法割舍的羁绊及其赖以生存的土壤。",
+      "expansion": null,
+      "experienceTag": "你熟知各类鬼怪的秉性特点"
+    }
+  ]
+}

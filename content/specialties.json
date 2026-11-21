@@ -1,0 +1,324 @@
+{
+    "kind": "specialty",
+    "items": [
+        {
+            "id": "specialty.深度灵体合一",
+            "kind": "specialty",
+            "name": "深度灵体合一",
+            "expansion": null,
+            "description": "你的生命值上限恒定变为 1 点，然后把减少的自己的生命值上限按照 1 : 4 的比例转化为灵力值上限（即 1 点生命值上限= 4 点灵力值上限），但是你的灵力值上限 -5 点。\n你的生命值上限获得 1 点提升时，也会变为提升 4 点灵力值上限。\n当你受到【伤害】时，你可以选择消耗 4 点灵力值令该【伤害】减少1级。",
+            "source": {
+                "sheet": "专长",
+                "row": 4
+            }
+        },
+        {
+            "id": "specialty.人生如戏",
+            "kind": "specialty",
+            "name": "人生如戏",
+            "expansion": null,
+            "description": "当你获得 1 枚时髦骰时，你会立即获得 D4 点时髦值。",
+            "source": {
+                "sheet": "专长",
+                "row": 5
+            }
+        },
+        {
+            "id": "specialty.同仇",
+            "kind": "specialty",
+            "name": "同仇",
+            "expansion": null,
+            "description": "如果你和具有同仇专长的生物在一个行动顺序中，你们进行攻击检定时会获得 1 枚加骰。",
+            "source": {
+                "sheet": "专长",
+                "row": 6
+            }
+        },
+        {
+            "id": "specialty.灵力觉醒",
+            "kind": "specialty",
+            "name": "灵力觉醒",
+            "expansion": null,
+            "description": "若在一次行动检定中，你通过激活灵能力标签获得加骰，你可以将其中一枚 D4 取满。",
+            "source": {
+                "sheet": "专长",
+                "row": 7
+            }
+        },
+        {
+            "id": "specialty.星聚体",
+            "kind": "specialty",
+            "name": "星聚体",
+            "expansion": null,
+            "description": "你在从当前场景进入到下一个场景时，会恢复 5 点灵力值。",
+            "source": {
+                "sheet": "专长",
+                "row": 8
+            }
+        },
+        {
+            "id": "specialty.武神体",
+            "kind": "specialty",
+            "name": "武神体",
+            "expansion": null,
+            "description": "施展武技进行攻击检定时，你可以通过减少通过武技强度获得的加骰来减少该武技的灵力值消耗，每减少 1 枚加骰，武技的灵力值消耗也减少 1 点。\n但无论如何，武技的灵力值消耗不能低于 1 点。",
+            "source": {
+                "sheet": "专长",
+                "row": 9
+            }
+        },
+        {
+            "id": "specialty.逆势而上",
+            "kind": "specialty",
+            "name": "逆势而上",
+            "expansion": null,
+            "description": "选择反击进行的攻击检定承受的减值减少 5 点。",
+            "source": {
+                "sheet": "专长",
+                "row": 10
+            }
+        },
+        {
+            "id": "specialty.人名树影",
+            "kind": "specialty",
+            "name": "人名树影",
+            "expansion": null,
+            "description": "每场游戏聚会开始时，如果时髦值低于 20 点，你的时髦值会变为 20 点。",
+            "source": {
+                "sheet": "专长",
+                "row": 11
+            }
+        },
+        {
+            "id": "specialty.先先之先",
+            "kind": "specialty",
+            "name": "先先之先",
+            "expansion": null,
+            "description": "若目标对你进行的攻击检定，你可在得出总值后再选择是防御还是反击。（注：具有先先之先的角色被武技：轮华攻击时，施展轮华的角色无论如何都不会获得加骰）",
+            "source": {
+                "sheet": "专长",
+                "row": 12
+            }
+        },
+        {
+            "id": "specialty.战斗医师",
+            "kind": "specialty",
+            "name": "战斗医师",
+            "expansion": null,
+            "description": "当你在战斗中对目标造成【恢复】时，额外恢复目标 1 点生命值。",
+            "source": {
+                "sheet": "专长",
+                "row": 13
+            }
+        },
+        {
+            "id": "specialty.灵能导师",
+            "kind": "specialty",
+            "name": "灵能导师",
+            "expansion": null,
+            "description": "你施展术法消耗的灵力值始终减少 1 点，但减少后的术法灵力值消耗不能低于 1 点。",
+            "source": {
+                "sheet": "专长",
+                "row": 14
+            }
+        },
+        {
+            "id": "specialty.凶猛武士",
+            "kind": "specialty",
+            "name": "凶猛武士",
+            "expansion": null,
+            "description": "你施展武技造成的【伤害】会增加 1 级，但是其他【效果】都会减少 2 级。",
+            "source": {
+                "sheet": "专长",
+                "row": 15
+            }
+        },
+        {
+            "id": "specialty.凶暴术士",
+            "kind": "specialty",
+            "name": "凶暴术士",
+            "expansion": null,
+            "description": "你施展术法造成的【伤害】会增加 1 级，但是其他【效果】都会减少 2 级。",
+            "source": {
+                "sheet": "专长",
+                "row": 16
+            }
+        },
+        {
+            "id": "specialty.万人迷",
+            "kind": "specialty",
+            "name": "万人迷",
+            "expansion": null,
+            "description": "你进行说服检定时可以投掷两枚定骰，并取高值使用。",
+            "source": {
+                "sheet": "专长",
+                "row": 17
+            }
+        },
+        {
+            "id": "specialty.干探",
+            "kind": "specialty",
+            "name": "干探",
+            "expansion": null,
+            "description": "你进行调查检定时可以投掷两枚定骰，并取高值使用。",
+            "source": {
+                "sheet": "专长",
+                "row": 18
+            }
+        },
+        {
+            "id": "specialty.有备而来",
+            "kind": "specialty",
+            "name": "有备而来",
+            "expansion": null,
+            "description": "你的道具点上限+1。\n当你进入一个新场景且没有道具点时，获得 1 点道具点。",
+            "source": {
+                "sheet": "专长",
+                "row": 19
+            }
+        },
+        {
+            "id": "specialty.聚合灵效",
+            "kind": "specialty",
+            "name": "聚合灵效",
+            "expansion": null,
+            "description": "你进行行动检定成功时，你可以消耗 1 灵力点，让你获得的【成功等级】数量增加 1 个。一个场景中仅生效一次。",
+            "source": {
+                "sheet": "专长",
+                "row": 20
+            }
+        },
+        {
+            "id": "specialty.不动如山",
+            "kind": "specialty",
+            "name": "不动如山",
+            "expansion": null,
+            "description": "当你受到【效果】时，如果这个【效果】使用【成功等级】数量计算效果等级，视为该【效果】的【成功等级】数量减少 1 个。一轮战斗仅生效两次。",
+            "source": {
+                "sheet": "专长",
+                "row": 21
+            }
+        },
+        {
+            "id": "specialty.反转劣势",
+            "kind": "specialty",
+            "name": "反转劣势",
+            "expansion": null,
+            "description": "你在施展灵能力进行检定时，你可以主动宣告触发你的灵能力弱点标签，此时灵能力弱点标签为你提供加骰。\n你必须用一个全新的角度，诠释你的灵能力弱点是如何在这次行动中为你提供帮助的。主持人拥有最终裁定权。\n你本次检定掷骰的D20结果为 9 或更低时，将其视为 10 。以此方式触发灵能力弱点时，你不会获得经验值。一个场景中仅生效一次。",
+            "source": {
+                "sheet": "专长",
+                "row": 22
+            }
+        },
+        {
+            "id": "specialty.画符大师",
+            "kind": "specialty",
+            "name": "画符大师",
+            "expansion": null,
+            "description": "你每次使用道具点施展符箓造成【效果】时，都会使其中一个【效果】提高 2 级。",
+            "source": {
+                "sheet": "专长",
+                "row": 23
+            }
+        },
+        {
+            "id": "specialty.主角登场",
+            "kind": "specialty",
+            "name": "主角登场",
+            "expansion": null,
+            "description": "你可以在进行行动检定中立即获得一枚时髦骰。一个场景中仅生效一次。",
+            "source": {
+                "sheet": "专长",
+                "row": 24
+            }
+        },
+        {
+            "id": "specialty.大艺术家",
+            "kind": "specialty",
+            "name": "大艺术家",
+            "expansion": null,
+            "description": "当你消耗≥10点时髦值执行时髦动作时，减少 D4 时髦值的消耗。",
+            "source": {
+                "sheet": "专长",
+                "row": 25
+            }
+        },
+        {
+            "id": "specialty.多重守护者",
+            "kind": "specialty",
+            "name": "多重守护者",
+            "expansion": null,
+            "description": "当你进行攻击检定并对目标造成【伤害】后，对自身造成【强化防御 1 】。",
+            "source": {
+                "sheet": "专长",
+                "row": 26
+            }
+        },
+        {
+            "id": "specialty.使者凭咒",
+            "kind": "specialty",
+            "name": "使者凭咒",
+            "expansion": null,
+            "description": "你选择一项你已经习得的术法，该术法的灵力消耗减少2点（最少不能少于 1 ）。但你施展该术法会使自己的当前生命值减少 1 点。",
+            "source": {
+                "sheet": "专长",
+                "row": 27
+            }
+        },
+        {
+            "id": "specialty.灵币铸造",
+            "kind": "specialty",
+            "name": "灵币铸造",
+            "expansion": null,
+            "description": "你可以执行行动消耗 2 道具点创造 1 枚灵币。\n你可以在任何时候花费灵币（无需动作），花费灵币时，你可以选择目标造成以下效果之一：\n·恢复 D4 的灵力值\n·恢复 D4 的生命值\n·对目标造成【强化防御 1 】效果\n你至多只能拥有 1 枚灵币。",
+            "source": {
+                "sheet": "专长",
+                "row": 28
+            }
+        },
+        {
+            "id": "specialty.赋罪者",
+            "kind": "specialty",
+            "name": "赋罪者",
+            "expansion": null,
+            "description": "当其他生物受到【伤害】时，你可以让该【伤害】减少 2 点，你受到同类型的【伤害 2 】。",
+            "source": {
+                "sheet": "专长",
+                "row": 29
+            }
+        },
+        {
+            "id": "specialty.狂武者",
+            "kind": "specialty",
+            "name": "狂武者",
+            "expansion": null,
+            "description": "每场聚会仅生效一次。你可以花费 5 点时髦值，你可以临时学会一项未习得的武技（须符合习得条件），你会在断章时遗忘你习得的武技。",
+            "source": {
+                "sheet": "专长",
+                "row": 30
+            }
+        },
+        {
+            "id": "specialty.乱法者",
+            "kind": "specialty",
+            "name": "乱法者",
+            "expansion": null,
+            "description": "每场聚会仅生效一次。你可以花费 5 点时髦值，你可以临时学会一项未习得的术法（须符合习得条件），你会在断章时遗忘你习得的术法。",
+            "source": {
+                "sheet": "专长",
+                "row": 31
+            }
+        },
+        {
+            "id": "specialty.灵兽招来",
+            "kind": "specialty",
+            "name": "灵兽招来",
+            "expansion": null,
+            "description": "你获得一只跟随着你的灵兽。规则上，他被视为两个灵兽【标签】，一个决定它的形态，一个决定它的异能。\n【灵兽标签】激活规则：你激活该标签后，在一次聚会中你无法再激活该灵兽标签。\n创建形态：灵兽的形态仅代表该灵兽的外在样貌，其造型来源于中外典籍当中的生物形象，你可以使用任意典籍中的生物形象来决定你的灵兽样貌，然后将生物的名字作为一个【灵兽标签】。\n选择异能：你可以从下表中选择一个异能，这代表着你的灵兽所掌握的异能，同时也是一个【灵兽标签】。\n【魅惑幻形】能够编织覆盖特定区域的幻境，修改其中的光影与声音，引导目标的情绪产生波动。\n【黄金守护】能够感知被埋藏的贵金属，将接触的金银转化为高速旋转的金属风暴。\n【天象主宰】能够飞翔于天空当中，操控云层中的水汽凝结降雨，引导空气中的电荷生成雷电，改变局部气流方向。\n【空间撕裂】能够干扰非实体屏障、阵法或结界，对空间结构造成不稳定裂缝。\n【毒液审判】能够吐出加速伤口愈合的唾液与腐蚀伤口的毒液。\n【净化圣域】能够通过触碰污染源，分解其中的毒素、诅咒能量或放射性物质。\n【法典窃取】能够提取书籍、卷轴中的文字，将其转移到其余载体之上，并对文字的意思进行解读。\n【地脉封镇】能够践踏地面使土壤岩层硬化，重组金属物品的分子排列以提升密度。\n【雷鼓震魂】发出混合低频震动与高频雷音的咆哮，对实体物质产生共振，对灵体产生震荡波。\n【瘴疠为膳】能够吸收附近的瘟疫毒气，从背部长出解毒的赤色菌菇。\n【千影寻踪】可将自身影子分裂为九道，每道影子可独立追踪不同气味的来源。\n【骨刃铸兵】可将骨头转化为青铜兵刃，兵刃形状可以根据自身意志变化。\n【珠泪凝珀】可将眼泪通过接触水源生成琥珀，琥珀能够封存声音。\n【织霞成锦】能够吞食晚霞吐出七彩锦缎，触碰锦缎者可减轻自身受到重力的影响。\n【泉眼通幽】能够操控水脉制造漩涡通道，快速转移到水脉所流通的其他地点。",
+            "source": {
+                "sheet": "专长",
+                "row": 32
+            }
+        }
+    ]
+}

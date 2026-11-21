@@ -1,0 +1,463 @@
+{
+  "kind": "styleAction",
+  "items": [
+    {
+      "id": "styleAction.通用.超灵觉醒",
+      "kind": "styleAction",
+      "name": "超灵觉醒",
+      "style": "通用",
+      "cost": 50,
+      "effect": "你进行攻击检定时，你通过加骰获得的骰值全部翻倍，然后你投掷一枚 D6，你获得对应数值的经验值。",
+      "expansion": null,
+      "source": {
+        "sheet": "时髦动作",
+        "row": 4
+      }
+    },
+    {
+      "id": "styleAction.策定山河.修养身心",
+      "kind": "styleAction",
+      "name": "修养身心",
+      "style": "策定山河",
+      "cost": 5,
+      "effect": "在任意时刻，你对自身造成【增加灵力2】。",
+      "expansion": null,
+      "source": {
+        "sheet": "时髦动作",
+        "row": 5
+      }
+    },
+    {
+      "id": "styleAction.策定山河.早有预料",
+      "kind": "styleAction",
+      "name": "早有预料",
+      "style": "策定山河",
+      "cost": 10,
+      "effect": "你的回合即将开始时，你可以无需消耗行动立即施展一个效果术法。",
+      "expansion": null,
+      "source": {
+        "sheet": "时髦动作",
+        "row": 6
+      }
+    },
+    {
+      "id": "styleAction.策定山河.绝代名策",
+      "kind": "styleAction",
+      "name": "绝代名策",
+      "style": "策定山河",
+      "cost": 15,
+      "effect": "你在进行攻击检定时，如果对方选择反击，你可以获得3枚加骰（仅本次）。",
+      "expansion": null,
+      "source": {
+        "sheet": "时髦动作",
+        "row": 7
+      }
+    },
+    {
+      "id": "styleAction.策定山河.战术切换",
+      "kind": "styleAction",
+      "name": "战术切换",
+      "style": "策定山河",
+      "cost": 20,
+      "effect": "新的轮次开始时，对先序的狩魂者造成【强化防御2】，对后序的狩魂者造成【强化攻击2】。",
+      "expansion": null,
+      "source": {
+        "sheet": "时髦动作",
+        "row": 8
+      }
+    },
+    {
+      "id": "styleAction.策定山河.胜天半子",
+      "kind": "styleAction",
+      "name": "胜天半子",
+      "style": "策定山河",
+      "cost": 25,
+      "effect": "同场景内的生物进行行动检定成功时（包括你自己），你可以改变本次行动检定获得的【成功等级】，你可以在1~5个【成功等级】中选择。",
+      "expansion": null,
+      "source": {
+        "sheet": "时髦动作",
+        "row": 9
+      }
+    },
+    {
+      "id": "styleAction.无畏守护.加固防御",
+      "kind": "styleAction",
+      "name": "加固防御",
+      "style": "无畏守护",
+      "cost": 5,
+      "effect": "当你选择防御时，你可以额外投掷 1 枚加骰将结果加入挑战值中。",
+      "expansion": null,
+      "source": {
+        "sheet": "时髦动作",
+        "row": 10
+      }
+    },
+    {
+      "id": "styleAction.无畏守护.奋不顾身",
+      "kind": "styleAction",
+      "name": "奋不顾身",
+      "style": "无畏守护",
+      "cost": 10,
+      "effect": "其他狩魂者受到单个【效果】时，你可以代替他承受该【效果】。",
+      "expansion": null,
+      "source": {
+        "sheet": "时髦动作",
+        "row": 11
+      }
+    },
+    {
+      "id": "styleAction.无畏守护.无畏前锋",
+      "kind": "styleAction",
+      "name": "无畏前锋",
+      "style": "无畏守护",
+      "cost": 15,
+      "effect": "新的轮次开始时，若你启动该时髦动作，则本轮中，所有敌人的攻击检定必须对你施展。",
+      "expansion": null,
+      "source": {
+        "sheet": "时髦动作",
+        "row": 12
+      }
+    },
+    {
+      "id": "styleAction.无畏守护.绝对防御",
+      "kind": "styleAction",
+      "name": "绝对防御",
+      "style": "无畏守护",
+      "cost": 20,
+      "effect": "当前场景中的单一生物受到【伤害】时，你可以令该生物获得对应的【伤害免疫】持续到当前战斗轮结束。",
+      "expansion": null,
+      "source": {
+        "sheet": "时髦动作",
+        "row": 13
+      }
+    },
+    {
+      "id": "styleAction.无畏守护.永续守护",
+      "kind": "styleAction",
+      "name": "永续守护",
+      "style": "无畏守护",
+      "cost": 25,
+      "effect": "当你退场时，你可以启动该时髦动作。当前场景中，生物进行行动检定时，你可以为这些行动检定都增加一枚时髦骰。",
+      "expansion": null,
+      "source": {
+        "sheet": "时髦动作",
+        "row": 14
+      }
+    },
+    {
+      "id": "styleAction.玩世不恭.云手摘月",
+      "kind": "styleAction",
+      "name": "云手摘月",
+      "style": "玩世不恭",
+      "cost": 5,
+      "effect": "在任意时刻，你对自身造成【造物1】。",
+      "expansion": null,
+      "source": {
+        "sheet": "时髦动作",
+        "row": 15
+      }
+    },
+    {
+      "id": "styleAction.玩世不恭.不行重来",
+      "kind": "styleAction",
+      "name": "不行重来",
+      "style": "玩世不恭",
+      "cost": 10,
+      "effect": "你进行一次行动检定后，如果你觉得这次行动检定不符合你的心意，你可以重骰本次行动检定，但你必须接受新的出值与结果。",
+      "expansion": null,
+      "source": {
+        "sheet": "时髦动作",
+        "row": 16
+      }
+    },
+    {
+      "id": "styleAction.玩世不恭.魂灵切换",
+      "kind": "styleAction",
+      "name": "魂灵切换",
+      "style": "玩世不恭",
+      "cost": 15,
+      "effect": "在任意时刻，你修改你的一个【灵能力标签】并与DH讨论其是否可行，持续到你离开当前场景。",
+      "expansion": null,
+      "source": {
+        "sheet": "时髦动作",
+        "row": 17
+      }
+    },
+    {
+      "id": "styleAction.玩世不恭.叙事闪回",
+      "kind": "styleAction",
+      "name": "叙事闪回",
+      "style": "玩世不恭",
+      "cost": 20,
+      "effect": "你在征得DH的同意后，立即向之前曾经历过的事件闪回，寻找这个事件中未曾找到过的细节，或者未曾被注意过的行动。你需要与DH讨论你的闪回事件的具体内容，同时必须让你闪回事件不影响整体的故事走向，或是破坏其他玩家的游戏体验。",
+      "expansion": null,
+      "source": {
+        "sheet": "时髦动作",
+        "row": 18
+      }
+    },
+    {
+      "id": "styleAction.玩世不恭.轮到我了",
+      "kind": "styleAction",
+      "name": "轮到我了",
+      "style": "玩世不恭",
+      "cost": 25,
+      "effect": "当一个头目级或首领级生物进入其额外回合时，你可以将其转变为你的额外回合。使用该时髦动作后，你在下个轮次中无法做出任何行动。",
+      "expansion": null,
+      "source": {
+        "sheet": "时髦动作",
+        "row": 19
+      }
+    },
+    {
+      "id": "styleAction.快意恩仇.磨砺锐气",
+      "kind": "styleAction",
+      "name": "磨砺锐气",
+      "style": "快意恩仇",
+      "cost": 5,
+      "effect": "在任意时刻，你对自身造成【强化攻击1】，你通过此时髦动作获得的【效果】还未失效时，不能再使用该时髦动作。",
+      "expansion": null,
+      "source": {
+        "sheet": "时髦动作",
+        "row": 20
+      }
+    },
+    {
+      "id": "styleAction.快意恩仇.刀间舔血",
+      "kind": "styleAction",
+      "name": "刀间舔血",
+      "style": "快意恩仇",
+      "cost": 10,
+      "effect": "当你选择反击进行攻击检定时，该次检定可以获得2枚加骰。如果你的该次反击的攻击检定小于对方的攻击检定，对方本次进行攻击检定的挑战值减少5点。",
+      "expansion": null,
+      "source": {
+        "sheet": "时髦动作",
+        "row": 21
+      }
+    },
+    {
+      "id": "styleAction.快意恩仇.生死看淡",
+      "kind": "styleAction",
+      "name": "生死看淡",
+      "style": "快意恩仇",
+      "cost": 15,
+      "effect": "当你的生命值变为0时，你可以投掷一次D100，如果投掷的数值小于等于你的时髦值（消耗时髦值前）的两倍，你的生命值变为1点。",
+      "expansion": null,
+      "source": {
+        "sheet": "时髦动作",
+        "row": 22
+      }
+    },
+    {
+      "id": "styleAction.快意恩仇.不服就干",
+      "kind": "styleAction",
+      "name": "不服就干",
+      "style": "快意恩仇",
+      "cost": 20,
+      "effect": "当你的行动检定成功时，你可以消耗X点生命值为该次检定增加x个【成功等级】（X不能大于你的当前生命值）。",
+      "expansion": null,
+      "source": {
+        "sheet": "时髦动作",
+        "row": 23
+      }
+    },
+    {
+      "id": "styleAction.快意恩仇.玉石俱焚",
+      "kind": "styleAction",
+      "name": "玉石俱焚",
+      "style": "快意恩仇",
+      "cost": 25,
+      "effect": "当你的生命值变为0时，使你生命值变为0的生物受到【湮灭伤害X】（X等于你的生命值上限）。",
+      "expansion": null,
+      "source": {
+        "sheet": "时髦动作",
+        "row": 24
+      }
+    },
+    {
+      "id": "styleAction.百折不挠.呼吸回血",
+      "kind": "styleAction",
+      "name": "呼吸回血",
+      "style": "百折不挠",
+      "cost": 5,
+      "effect": "在任意时刻，你对自身造成【恢复1】。",
+      "expansion": null,
+      "source": {
+        "sheet": "时髦动作",
+        "row": 25
+      }
+    },
+    {
+      "id": "styleAction.百折不挠.坚韧不拔",
+      "kind": "styleAction",
+      "name": "坚韧不拔",
+      "style": "百折不挠",
+      "cost": 10,
+      "effect": "在任意时刻，你对自身造成【清除效果2】。",
+      "expansion": null,
+      "source": {
+        "sheet": "时髦动作",
+        "row": 26
+      }
+    },
+    {
+      "id": "styleAction.百折不挠.顽强意志",
+      "kind": "styleAction",
+      "name": "顽强意志",
+      "style": "百折不挠",
+      "cost": 15,
+      "effect": "当你的行动检定失败时，你可以将其改为成功，并视为具有1个【成功等级】。",
+      "expansion": null,
+      "source": {
+        "sheet": "时髦动作",
+        "row": 27
+      }
+    },
+    {
+      "id": "styleAction.百折不挠.英雄不朽",
+      "kind": "styleAction",
+      "name": "英雄不朽",
+      "style": "百折不挠",
+      "cost": 20,
+      "effect": "你在轮次开始时选择一个已经退场的狩魂者，该狩魂者可以选择消耗20点时髦值重新回到当前场景中，其生命值变为1点。",
+      "expansion": null,
+      "source": {
+        "sheet": "时髦动作",
+        "row": 28
+      }
+    },
+    {
+      "id": "styleAction.百折不挠.生死流转",
+      "kind": "styleAction",
+      "name": "生死流转",
+      "style": "百折不挠",
+      "cost": 25,
+      "effect": "当你的生命值变为0时，你可以不立即退场，直到你下回合结束后再退场（即使你的生命值不为0）。",
+      "expansion": null,
+      "source": {
+        "sheet": "时髦动作",
+        "row": 29
+      }
+    }
+  ],
+  "styles": [
+    {
+      "id": "style.通用",
+      "kind": "style",
+      "name": "通用",
+      "expansion": null,
+      "description": "",
+      "actionIds": [
+        "styleAction.通用.超灵觉醒"
+      ],
+      "costs": [
+        50
+      ]
+    },
+    {
+      "id": "style.策定山河",
+      "kind": "style",
+      "name": "策定山河",
+      "expansion": null,
+      "description": "",
+      "actionIds": [
+        "styleAction.策定山河.修养身心",
+        "styleAction.策定山河.早有预料",
+        "styleAction.策定山河.绝代名策",
+        "styleAction.策定山河.战术切换",
+        "styleAction.策定山河.胜天半子"
+      ],
+      "costs": [
+        5,
+        10,
+        15,
+        20,
+        25
+      ]
+    },
+    {
+      "id": "style.无畏守护",
+      "kind": "style",
+      "name": "无畏守护",
+      "expansion": null,
+      "description": "",
+      "actionIds": [
+        "styleAction.无畏守护.加固防御",
+        "styleAction.无畏守护.奋不顾身",
+        "styleAction.无畏守护.无畏前锋",
+        "styleAction.无畏守护.绝对防御",
+        "styleAction.无畏守护.永续守护"
+      ],
+      "costs": [
+        5,
+        10,
+        15,
+        20,
+        25
+      ]
+    },
+    {
+      "id": "style.玩世不恭",
+      "kind": "style",
+      "name": "玩世不恭",
+      "expansion": null,
+      "description": "",
+      "actionIds": [
+        "styleAction.玩世不恭.云手摘月",
+        "styleAction.玩世不恭.不行重来",
+        "styleAction.玩世不恭.魂灵切换",
+        "styleAction.玩世不恭.叙事闪回",
+        "styleAction.玩世不恭.轮到我了"
+      ],
+      "costs": [
+        5,
+        10,
+        15,
+        20,
+        25
+      ]
+    },
+    {
+      "id": "style.快意恩仇",
+      "kind": "style",
+      "name": "快意恩仇",
+      "expansion": null,
+      "description": "",
+      "actionIds": [
+        "styleAction.快意恩仇.磨砺锐气",
+        "styleAction.快意恩仇.刀间舔血",
+        "styleAction.快意恩仇.生死看淡",
+        "styleAction.快意恩仇.不服就干",
+        "styleAction.快意恩仇.玉石俱焚"
+      ],
+      "costs": [
+        5,
+        10,
+        15,
+        20,
+        25
+      ]
+    },
+    {
+      "id": "style.百折不挠",
+      "kind": "style",
+      "name": "百折不挠",
+      "expansion": null,
+      "description": "",
+      "actionIds": [
+        "styleAction.百折不挠.呼吸回血",
+        "styleAction.百折不挠.坚韧不拔",
+        "styleAction.百折不挠.顽强意志",
+        "styleAction.百折不挠.英雄不朽",
+        "styleAction.百折不挠.生死流转"
+      ],
+      "costs": [
+        5,
+        10,
+        15,
+        20,
+        25
+      ]
+    }
+  ]
+}
