@@ -4,3 +4,7 @@ out/
 *.tsbuildinfo
 .DS_Store
 .env*
+.vercel
+.netlify/
+.wrangler/
+.dev.vars*
