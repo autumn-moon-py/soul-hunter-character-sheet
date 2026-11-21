@@ -42,6 +42,9 @@ export default function Workbench() {
       <main id="workbench-main" className="mx-auto max-w-[1100px] px-4 py-5 lg:px-6">
         <Sheet />
       </main>
+      <span className="no-print pointer-events-none fixed bottom-1 right-2 z-20 text-[10px] leading-none text-zinc-400">
+        {process.env.NEXT_PUBLIC_APP_VERSION}
+      </span>
     </div>
   );
 }

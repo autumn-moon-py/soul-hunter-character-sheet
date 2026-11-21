@@ -14,7 +14,10 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "deploy:cf": "npm run build && wrangler pages deploy out --project-name soul-hunter-character-sheet --branch main"
+    "deploy:cf": "npm run build && wrangler pages deploy out --project-name soul-hunter-character-sheet --branch main",
+    "deploy:vercel": "npm run build && npx --yes vercel@latest deploy out --prod --yes",
+    "deploy:nf": "npm run build && npx --yes netlify-cli@latest deploy --dir=out --prod --no-build --site-name soul-hunter-character-sheet",
+    "deploy:all": "npm run build && wrangler pages deploy out --project-name soul-hunter-character-sheet --branch main && npx --yes vercel@latest deploy out --prod --yes && npx --yes netlify-cli@latest deploy --dir=out --prod --no-build --site-name soul-hunter-character-sheet"
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.1.3",
