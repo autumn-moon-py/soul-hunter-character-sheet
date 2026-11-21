@@ -1,6 +1,6 @@
 # 狩魂者车卡器
 
-Next.js 16 + React 19 + TypeScript 的《狩魂者 TRPG》角色卡工具，数据保存在浏览器 localStorage，角色卡可导出 HTML，也支持骰娘 / 回声岛录卡指令。
+Next.js 16 + React 19 + TypeScript 的《狩魂者 TRPG》角色卡工具，数据保存在浏览器 localStorage，角色卡可导出 HTML，也支持骰娘录卡指令。
 
 ## 开发
 
@@ -21,7 +21,6 @@ npm run build
 
 ## TODO
 
-- [ ] 参考 DHSheet 仓库完善存档管理（新建、切换、重命名、复制、删除的完整交互与校验）
 - [ ] 拓展支持（暂缓）
   - [ ] 拓展勾选 UI，保存已启用拓展
   - [ ] 边缘人扮演指南：业力标签、事件业力

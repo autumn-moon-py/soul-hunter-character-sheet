@@ -8,3 +8,5 @@ out/
 .netlify/
 .wrangler/
 .dev.vars*
+
+.iga/

@@ -1,13 +1,19 @@
 import type { SoulHunterCharacter } from "@/src/types";
+import { buildDiceBotCommand } from "./export-record";
 
 export const CHARACTER_DATA_SCRIPT_ID = "soul-hunter-character";
+export const DICE_COMMAND_SCRIPT_ID = "soul-hunter-dice";
 
-/** 内嵌角色数据：转义 < 以免提前闭合 script，同时保持合法 JSON */
-export function serializeCharacter(character: SoulHunterCharacter): string {
-  return JSON.stringify(character)
+/** 内嵌 JSON：转义 < 以免提前闭合 script，同时保持合法 JSON */
+function serializeJson(value: unknown): string {
+  return JSON.stringify(value)
     .replace(/</g, "\\u003c")
     .replace(/\u2028/g, "\\u2028")
     .replace(/\u2029/g, "\\u2029");
+}
+
+export function serializeCharacter(character: SoulHunterCharacter): string {
+  return serializeJson(character);
 }
 
 function escapeHtml(value: string): string {
@@ -33,8 +39,9 @@ function documentShell(
 ${headExtra}
 </head>
 <body>
-${body}
 <script type="application/json" id="${CHARACTER_DATA_SCRIPT_ID}">${serializeCharacter(character)}</script>
+<script type="application/json" id="${DICE_COMMAND_SCRIPT_ID}">${serializeJson(buildDiceBotCommand(character))}</script>
+${body}
 </body>
 </html>`;
 }
@@ -119,10 +126,29 @@ function clonePaper(paper: Element): string {
 const EXPORT_STYLE = `
 body { padding: 16px 12px 32px; }
 body > .paper { margin: 0 auto 14px; }
-.export-toolbar { position: fixed; top: 14px; right: 14px; z-index: 20; }
+.export-toolbar { position: fixed; top: 14px; right: 14px; z-index: 20; display: flex; gap: 6px; }
 .export-toolbar button {
   border: 1px solid #2b2b2b; border-radius: 999px; background: #232323; color: #fff;
   padding: 6px 14px; font-size: 12px; cursor: pointer;
+}
+.export-dice-panel {
+  position: fixed; top: 54px; right: 14px; z-index: 20;
+  width: min(420px, calc(100vw - 28px));
+  border: 1px solid #2b2b2b; border-radius: 10px; background: #232323; color: #fff;
+  padding: 10px 12px 12px; box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.45);
+}
+.export-dice-panel[hidden] { display: none; }
+.export-dice-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 12px; }
+.export-dice-head > span:first-child { opacity: 0.75; }
+.export-dice-actions { display: flex; gap: 6px; }
+.export-dice-panel button {
+  border: 1px solid #4a4a4a; border-radius: 999px; background: #2f2f2f; color: #fff;
+  padding: 3px 10px; font-size: 11px; cursor: pointer;
+}
+.export-dice-text {
+  display: block; margin-top: 8px; max-height: 160px; overflow: auto;
+  white-space: pre-wrap; word-break: break-all; font-size: 11px; line-height: 1.6;
+  color: #e8e4da; user-select: all;
 }
 .pc-combobox-static {
   display: flex; width: 100%; min-height: 22px; align-items: center;
@@ -134,6 +160,7 @@ body > .paper { margin: 0 auto 14px; }
 @media print {
   body { padding: 0; background: #fff; }
   .export-toolbar { display: none !important; }
+  .export-dice-panel { display: none !important; }
   .paper { break-after: page; }
   .paper:last-of-type { break-after: auto; }
 }
@@ -160,6 +187,49 @@ document.querySelectorAll('button[data-export-expand]').forEach(function (button
     if (label) label.textContent = collapsed ? '展开' : '收起';
   });
 });
+
+(function () {
+  var node = document.getElementById("${DICE_COMMAND_SCRIPT_ID}");
+  var panel = document.querySelector("[data-export-dice-panel]");
+  var trigger = document.querySelector("[data-export-dice]");
+  if (!node || !panel || !trigger) return;
+
+  var text = node.textContent || "";
+  try { text = JSON.parse(text); } catch (error) {}
+  panel.querySelector("[data-export-dice-text]").textContent = text;
+
+  trigger.addEventListener("click", function () {
+    panel.hidden = !panel.hidden;
+  });
+  panel.querySelector("[data-export-dice-close]").addEventListener("click", function () {
+    panel.hidden = true;
+  });
+
+  var copyButton = panel.querySelector("[data-export-dice-copy]");
+  copyButton.addEventListener("click", function () {
+    var feedback = function (label) {
+      copyButton.textContent = label;
+      setTimeout(function () { copyButton.textContent = "复制"; }, 1500);
+    };
+    var fallback = function () {
+      var area = document.createElement("textarea");
+      area.value = text;
+      area.style.position = "fixed";
+      area.style.opacity = "0";
+      document.body.appendChild(area);
+      area.select();
+      var ok = false;
+      try { ok = document.execCommand("copy"); } catch (error) { ok = false; }
+      area.remove();
+      feedback(ok ? "已复制" : "复制失败");
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { feedback("已复制"); }, fallback);
+    } else {
+      fallback();
+    }
+  });
+})();
 `;
 
 /** 以实时纸面 DOM 生成导出 HTML，保证与编辑预览一致 */
@@ -168,7 +238,14 @@ export function buildCharacterPageHtml(character: SoulHunterCharacter): string {
   return documentShell(
     character,
     `<style>\n${collectStyles()}\n${EXPORT_STYLE}\n</style>`,
-    `<div class="export-toolbar no-print"><button type="button" onclick="window.print()">导出 PDF</button></div>
+    `<div class="export-toolbar no-print">
+<button type="button" data-export-dice>骰娘导出</button>
+<button type="button" onclick="window.print()">导出 PDF</button>
+</div>
+<div class="export-dice-panel no-print" data-export-dice-panel hidden>
+<div class="export-dice-head"><span>骰娘录卡指令</span><span class="export-dice-actions"><button type="button" data-export-dice-copy>复制</button><button type="button" data-export-dice-close>关闭</button></span></div>
+<code class="export-dice-text" data-export-dice-text></code>
+</div>
 ${papers}
 <script>${EXPORT_SCRIPT}</script>`,
   );

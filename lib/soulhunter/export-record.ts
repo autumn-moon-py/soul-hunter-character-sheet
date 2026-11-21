@@ -2,15 +2,19 @@ import { SKILLS } from "@/src/rules/constants";
 import { derive } from "@/src/rules/derive";
 import type { SoulHunterCharacter } from "@/src/types";
 
+/** 按空白卡模板显示为「【代号】姓名」，缺一项时只保留另一项 */
 function displayName(character: SoulHunterCharacter): string {
-  return character.identity.codename || character.identity.name || "狩魂者";
+  const name = character.identity.name.trim();
+  const codename = character.identity.codename.trim();
+  if (codename && name) return `【${codename}】${name}`;
+  if (codename) return `【${codename}】`;
+  return name || "狩魂者";
 }
 
-/** 按空白卡的骰娘录卡模板生成 .st 指令 */
+/** 按空白卡的骰娘录卡模板生成 .st 指令；姓名后仅有一个 -，其余字段连写 */
 export function buildDiceBotCommand(character: SoulHunterCharacter): string {
   const derived = derive(character);
-  const parts = [
-    displayName(character),
+  const fields = [
     `hp${character.resources.hpCurrent ?? derived.hpMax}`,
     `hpmax${derived.hpMax}`,
     `mp${character.resources.mpCurrent ?? derived.mpMax}`,
@@ -24,7 +28,7 @@ export function buildDiceBotCommand(character: SoulHunterCharacter): string {
     `心魂${character.attributes.soul}`,
     ...SKILLS.map((skill) => `${skill.name}${derived.skills[skill.id]}`),
   ];
-  return `.st ${parts.join("-")}`;
+  return `.st ${displayName(character)}-${fields.join("")}`;
 }
 
 /** 按空白卡的回声岛录卡模板生成 .st 指令 */
