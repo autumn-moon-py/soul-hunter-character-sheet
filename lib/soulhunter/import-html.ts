@@ -114,7 +114,6 @@ export function normalizeImportedCharacter(raw: unknown): SoulHunterCharacter | 
   const ability: SoulHunterAbility = {
     name: stringOr(abilityRaw.name, base.ability.name),
     description: stringOr(abilityRaw.description, base.ability.description),
-    tags: stringArrayOr(abilityRaw.tags, base.ability.tags),
     defect: optionalString(abilityRaw.defect),
     specialization: optionalString(abilityRaw.specialization) ?? base.ability.specialization,
     specialization2:

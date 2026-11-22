@@ -33,7 +33,6 @@ interface CharacterStore {
   setInsight: (value: number) => void;
   setSkillAllocation: (skill: SkillId, value: number) => void;
   setAbilityField: (field: keyof SoulHunterAbility, value: string) => void;
-  setAbilityTags: (tags: string[]) => void;
   setStyle: (styleId: string) => void;
   setCombinedStyle: (input: {
     name: string;
@@ -165,14 +164,7 @@ export const useCharacterStore = create<CharacterStore>((set, get) => ({
 
   setAbilityField: (field, value) =>
     get().update((draft) => {
-      if (field === "tags") return;
       draft.ability[field] = value;
-    }),
-
-  setAbilityTags: (tags) =>
-    get().update((draft) => {
-      const limit = derive(draft).quotas.abilityTags;
-      draft.ability.tags = tags.slice(0, limit).map((tag) => tag.trim());
     }),
 
   setStyle: (styleId) =>

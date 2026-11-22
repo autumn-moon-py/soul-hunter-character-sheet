@@ -14,6 +14,9 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
+    "ai": "tsx mcp/daemon.ts",
+    "ai:build": "tsup --config mcp/tsup.config.ts",
+    "ai:stdio": "tsx mcp/server.ts",
     "deploy:cf": "npm run build && npx --yes wrangler@latest pages deploy out --project-name soul-hunter-character-sheet --branch main",
     "deploy:vercel": "npm run build && npx --yes vercel@latest deploy out --prod --yes",
     "deploy:nf": "npm run build && npx --yes netlify-cli@latest deploy --dir=out --prod --no-build --site-name soul-hunter-character-sheet",
@@ -40,6 +43,7 @@
     "zustand": "^5.0.6"
   },
   "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
     "@types/node": "^24.0.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -47,7 +51,10 @@
     "postcss": "^8",
     "tailwindcss": "^3.4.17",
     "tailwindcss-animate": "^1.0.7",
+    "tsup": "^9.0.0",
+    "tsx": "^4.23.15",
     "typescript": "^5.9.0",
-    "vitest": "^3.2.0"
+    "vitest": "^3.2.0",
+    "zod": "^4.6.7"
   }
 }

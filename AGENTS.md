@@ -10,6 +10,8 @@ npm run dev        # http://localhost:3000
 npm run typecheck  # tsc --noEmit
 npm test           # vitest run
 npm run build
+npm run ai         # 本地 AI 助手服务：stdio MCP + 网页数据桥（127.0.0.1:4317）
+npm run ai:build   # 打包 MCP 服务到 mcp/dist
 ```
 
 交付前至少跑 `typecheck`、`test`、`build`；涉及界面的改动再用浏览器实际点一遍。
@@ -23,6 +25,7 @@ npm run build
 - `src/content/`：由 `content/*.json` 组装的卡牌目录
 - `content/`：规则数据 JSON，来源为上级目录的规则书
 - `lib/soulhunter/`：Zustand store、localStorage 存档、HTML/骰娘导出
+- `mcp/`：本地 AI 助手服务，MCP 工具复用 `src/rules`，网页通过 `lib/soulhunter/bridge.ts` 同步角色
 - `scripts/`：内容抽取与校验脚本（Python）
 
 ## 关键约定

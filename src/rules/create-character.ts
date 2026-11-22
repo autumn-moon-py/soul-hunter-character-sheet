@@ -24,7 +24,6 @@ export function createInitialCharacter(id = "local-character"): SoulHunterCharac
     ability: {
       name: "",
       description: "",
-      tags: [],
     },
     style: {
       mode: "preset",

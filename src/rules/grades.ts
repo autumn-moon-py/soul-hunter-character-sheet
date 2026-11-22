@@ -28,3 +28,15 @@ export function abilityCharLimit(soul: number): number {
 export function hanLength(text: string): number {
   return text.match(/\p{Script=Han}/gu)?.length ?? 0;
 }
+
+/** 灵能力标签写在描述里，用「」标示；【】是效果名，不算标签 */
+export function extractAbilityTags(text: string): string[] {
+  const tags: string[] = [];
+  const pattern = /「([^」]*)」/g;
+  let match: RegExpExecArray | null;
+  while ((match = pattern.exec(text)) !== null) {
+    const tag = match[1].trim();
+    if (tag) tags.push(tag);
+  }
+  return tags;
+}

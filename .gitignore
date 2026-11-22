@@ -8,5 +8,7 @@ out/
 .netlify/
 .wrangler/
 .dev.vars*
+mcp/dist/
+ai-backups/
 
 .iga/

@@ -34,7 +34,6 @@ export function createLegalCharacter(): SoulHunterCharacter {
     ability: {
       name: "未命名灵能力",
       description: "描述你的灵能力能做什么，尽量具体、有画面感。",
-      tags: ["第一个标签", "第二个标签", "第三个标签"],
       specialization: "伤害",
     },
     style: {

@@ -11,7 +11,6 @@ function withAbility(name: string) {
       ...character.ability,
       name,
       description: "以墨为媒，操纵文字丝线攻击、束缚与牵引。",
-      tags: ["丝线操纵"],
     },
   };
 }

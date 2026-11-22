@@ -39,7 +39,6 @@ export interface SoulHunterBond {
 export interface SoulHunterAbility {
   name: string;
   description: string;
-  tags: string[];
   defect?: string;
   specialization?: string;
   /** 第二项灵能力专精，心魂 SSS+ 时获得 */

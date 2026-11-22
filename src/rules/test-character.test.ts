@@ -33,7 +33,6 @@ const renTiansi: SoulHunterCharacter = {
     name: "墨形",
     description:
       "以书为媒：丝线操纵文字丝线攻击、束缚、牵引；焚词焚烧书中一词令其含义于目标显现；墨宠驱使墨水化心意相通之墨宠。灵力过载书页自燃，该检定成功等级-1并得经验。",
-    tags: ["丝线操纵", "焚词", "墨宠"],
     specialization: "伤害",
   },
   style: {

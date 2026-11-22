@@ -13,7 +13,6 @@ describe("createInitialCharacter", () => {
     expect(character.bond).toBeUndefined();
     expect(character.experienceTags).toEqual([]);
     expect(character.style.actionIds).toEqual([]);
-    expect(character.ability.tags).toEqual([]);
     expect(character.attributes).toEqual({ body: 0, mind: 0, soul: 0 });
     expect(character.insight).toBe(9);
     expect(character.resources.hpCurrent).toBeUndefined();

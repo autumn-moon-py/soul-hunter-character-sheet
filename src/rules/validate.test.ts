@@ -77,7 +77,7 @@ describe("validate", () => {
 
   it("rejects ability tags over the limit", () => {
     const character = clone();
-    character.ability.tags.push("第四个标签");
+    character.ability.description = "「甲」「乙」「丙」「丁」";
     expect(codes(character)).toContain("ability-tags-overflow");
   });
 

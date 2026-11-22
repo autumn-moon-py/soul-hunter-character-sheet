@@ -16,6 +16,7 @@ import { derive } from "./derive";
 import {
   abilityCharLimit,
   abilityTagLimit,
+  extractAbilityTags,
   isSecretAllowed,
   hanLength,
 } from "./grades";
@@ -142,19 +143,17 @@ export function validate(
     }
   }
   const tagLimit = abilityTagLimit(attributes.soul);
-  if (ability.tags.length > tagLimit) {
+  const abilityTags = extractAbilityTags(ability.description);
+  if (abilityTags.length > tagLimit) {
     add(
       "error",
       "ability-tags-overflow",
-      `灵能力标签 ${ability.tags.length} 个，超过上限 ${tagLimit} 个`,
-      "ability.tags",
+      `灵能力标签 ${abilityTags.length} 个，超过上限 ${tagLimit} 个`,
+      "ability.description",
     );
   }
-  if (ability.tags.some((tag) => !tag.trim())) {
-    add("warning", "ability-tag-empty", "存在空的灵能力标签", "ability.tags");
-  }
-  if (new Set(ability.tags.filter(Boolean)).size !== ability.tags.filter(Boolean).length) {
-    add("warning", "ability-tag-duplicate", "灵能力标签有重复", "ability.tags");
+  if (new Set(abilityTags).size !== abilityTags.length) {
+    add("warning", "ability-tag-duplicate", "灵能力标签有重复", "ability.description");
   }
 
   // ===== 经历标签 =====
