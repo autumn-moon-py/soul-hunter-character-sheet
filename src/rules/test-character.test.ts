@@ -16,8 +16,6 @@ const renTiansi: SoulHunterCharacter = {
     codename: "墨形",
     gender: "",
     age: "",
-    appearance: "",
-    personality: "",
     background: "文科生，毕业前回老家收拾遗物，发现一本会自己续写的手帐。",
   },
   bond: {

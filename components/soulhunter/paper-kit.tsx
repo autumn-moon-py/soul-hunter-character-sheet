@@ -97,12 +97,12 @@ export function StatBox({
         <span className="pc-label">{label}</span>
         <span className="pc-value justify-between">
           {children}
-          <span className="text-[9px] text-[#a1a1aa]">
+          <span className="text-pc-xs text-ink-hint">
             {grade} · 强度 {strength}
           </span>
         </span>
       </div>
-      <div className="bg-[#fafafa] px-1 py-0.5 text-center text-[9px] leading-tight text-[#71717a]">
+      <div className="bg-paper-hover px-1 py-0.5 text-center text-pc-xs leading-tight text-ink-muted">
         {quota}
       </div>
     </div>

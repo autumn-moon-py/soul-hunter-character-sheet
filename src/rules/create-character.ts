@@ -14,8 +14,6 @@ export function createInitialCharacter(id = "local-character"): SoulHunterCharac
       codename: "",
       gender: "",
       age: "",
-      appearance: "",
-      personality: "",
       background: "",
     },
     insight: 9,

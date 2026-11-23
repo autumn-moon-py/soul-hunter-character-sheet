@@ -5,7 +5,6 @@ import type { SoulHunterCharacter } from "@/src/types";
 import { useCharacterStore } from "./store";
 
 const BASE_KEY = "soul-hunter.ai.base";
-const AUTO_APPLY_KEY = "soul-hunter.ai.autoApply";
 const DEFAULT_BASE = "http://127.0.0.1:4317";
 
 export interface BridgeHealth {
@@ -52,14 +51,6 @@ function storageGet(key: string): string | null {
   }
 }
 
-function storageSet(key: string, value: string): void {
-  try {
-    window.localStorage.setItem(key, value);
-  } catch {
-    // 隐私模式下忽略
-  }
-}
-
 export function bridgeBase(): string {
   return storageGet(BASE_KEY) ?? DEFAULT_BASE;
 }
@@ -68,14 +59,6 @@ export function isLocalHost(): boolean {
   if (typeof window === "undefined") return false;
   const host = window.location.hostname;
   return host === "localhost" || host === "127.0.0.1";
-}
-
-export function readAutoApply(): boolean {
-  return storageGet(AUTO_APPLY_KEY) === "1";
-}
-
-export function writeAutoApply(value: boolean): void {
-  storageSet(AUTO_APPLY_KEY, value ? "1" : "0");
 }
 
 export async function probeBridge(
@@ -292,6 +275,9 @@ export function applyOperations(ops: readonly CharacterOperation[]): void {
         break;
       case "setSoulWeaponName":
         store.setSoulWeaponField("name", op.value);
+        break;
+      case "setPockets":
+        store.setPockets(op.value);
         break;
       case "setIdentityField":
         store.setIdentityField(op.field, op.value);

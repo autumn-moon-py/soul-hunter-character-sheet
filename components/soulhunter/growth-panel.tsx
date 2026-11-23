@@ -77,7 +77,7 @@ function MicroButton({
     <button
       type="button"
       className={cn(
-        "rounded border border-[#d9d2c4] px-2 py-0.5 text-[10px] text-[#3f3f46] transition-colors hover:bg-[#f4f4f5] disabled:opacity-40",
+        "rounded border border-paper-line px-2 py-0.5 text-pc-xs text-ink-soft transition-colors hover:bg-paper-hover disabled:opacity-40",
         className,
       )}
       disabled={disabled}
@@ -90,7 +90,7 @@ function MicroButton({
 
 function ColumnTitle({ children }: { children: React.ReactNode }) {
   return (
-    <div className="mb-1 border-b border-[#e8e2d6] pb-0.5 text-[10px] font-semibold tracking-wide text-[#6b6455]">
+    <div className="mb-1 border-b border-paper-line-faint pb-0.5 text-pc-xs font-semibold tracking-wide text-ink-muted">
       {children}
     </div>
   );
@@ -110,14 +110,14 @@ function UpgradeCard({
   action: React.ReactNode;
 }) {
   return (
-    <div className="flex flex-col rounded border border-[#d9d2c4] bg-white/60 p-1.5">
+    <div className="flex flex-col rounded border border-paper-line bg-white/60 p-1.5">
       <div className="flex items-start justify-between gap-1">
-        <span className="text-[10px] font-semibold">{title}</span>
-        <span className="shrink-0 rounded border border-[#d9d2c4] bg-[#f2eee4] px-1 text-[9px] text-[#4a4438]">
+        <span className="text-pc-xs font-semibold">{title}</span>
+        <span className="shrink-0 rounded border border-paper-line bg-paper-tint px-1 text-pc-xs text-ink-soft">
           {cost} 经验
         </span>
       </div>
-      <p className="mt-0.5 text-[9px] leading-snug text-[#8b8474]">{description}</p>
+      <p className="mt-0.5 text-pc-xs leading-snug text-ink-hint">{description}</p>
       <div className="mt-1 flex flex-1 flex-col gap-1">{children}</div>
       <div className="mt-1.5">{action}</div>
     </div>
@@ -186,9 +186,9 @@ export function GrowthPanel() {
 
   return (
     <Block title="升级">
-      <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 border-b border-[#e8e2d6] pb-1.5">
-        <div className="min-w-[160px] flex-1">
-          <div className="flex items-baseline justify-between text-[9px] text-[#6b6455]">
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 border-b border-paper-line-faint pb-1.5">
+        <div className="min-w-[160px] max-w-[340px] flex-1">
+          <div className="flex items-baseline justify-between text-pc-xs text-ink-muted">
             <span>经验</span>
             <span className="tabular-nums">
               {exp} / {BASE.expMax}
@@ -199,23 +199,23 @@ export function GrowthPanel() {
               <span
                 key={index}
                 className={cn(
-                  "h-1.5 flex-1 rounded-sm border border-[#d9d2c4]",
-                  index < exp ? "bg-[#2b2b2b]" : "bg-[#f2eee4]",
+                  "h-1.5 flex-1 rounded-sm border border-paper-line",
+                  index < exp ? "bg-ink" : "bg-paper-tint",
                 )}
               />
             ))}
           </div>
         </div>
 
-        <div className="flex items-center gap-1.5 text-[10px]">
-          <span className="text-[#6b6455]">本次 +{pendingExp}</span>
+        <div className="ml-auto flex items-center gap-1.5 text-pc-xs">
+          <span className="text-ink-muted">本次 +{pendingExp}</span>
           <MicroButton disabled={pendingExp <= 0} onClick={gainExperience}>
             应用
           </MicroButton>
         </div>
-        <span className="h-4 w-px bg-[#e8e2d6]" />
-        <div className="flex items-center gap-1.5 text-[10px]">
-          <span className="text-[#6b6455]">
+        <span className="h-4 w-px bg-paper-line-faint" />
+        <div className="flex items-center gap-1.5 text-pc-xs">
+          <span className="text-ink-muted">
             时髦值 {stylePoints} · 可换 {styleExp}
           </span>
           <MicroButton disabled={styleExp <= 0} onClick={convertStylePoints}>
@@ -225,35 +225,35 @@ export function GrowthPanel() {
       </div>
 
       <div className="mt-2 grid gap-2 md:grid-cols-[minmax(0,0.9fr)_minmax(0,2.1fr)]">
-        <div className="rounded border border-[#d9d2c4] bg-white/60 p-1.5">
+        <div className="rounded border border-paper-line bg-white/60 p-1.5">
           <ColumnTitle>获得经验</ColumnTitle>
 
           <div className="flex items-center justify-between py-0.5">
-            <span className="text-[11px]">激活缺陷</span>
+            <span className="text-pc-sm">激活缺陷</span>
             <PaperStepper value={defects} min={0} max={10} onChange={setDefects} />
           </div>
 
-          <div className="border-t border-dashed border-[#e8e2d6] py-0.5">
+          <div className="border-t border-dashed border-paper-line-faint py-0.5">
             <button
               type="button"
               className="flex w-full items-center justify-between py-0.5"
               onClick={() => setExpanded((value) => !value)}
             >
-              <span className="text-[11px]">总结事件</span>
+              <span className="text-pc-sm">总结事件</span>
               <span className="flex items-center gap-1">
-                <span className="rounded border border-[#d9d2c4] bg-[#f2eee4] px-1 text-[9px] tabular-nums leading-4 text-[#4a4438]">
+                <span className="rounded border border-paper-line bg-paper-tint px-1 text-pc-xs tabular-nums leading-4 text-ink-soft">
                   {yesCount} / 6
                 </span>
-                <span className="text-[10px] tabular-nums text-[#6b6455]">
+                <span className="text-pc-xs tabular-nums text-ink-muted">
                   +{summaryExp(yesCount)}
                 </span>
                 <ChevronDown
-                  className={cn("h-3 w-3 text-[#8b8474] transition-transform", expanded && "rotate-180")}
+                  className={cn("h-3 w-3 text-ink-hint transition-transform", expanded && "rotate-180")}
                 />
               </span>
             </button>
             {expanded ? (
-              <div className="mt-1 overflow-hidden rounded border border-[#e8e2d6] bg-white/60">
+              <div className="mt-1 overflow-hidden rounded border border-paper-line-faint bg-white/60">
                 {SUMMARY_QUESTIONS.map((question, index) => {
                   const checked = answers[index];
                   return (
@@ -261,8 +261,8 @@ export function GrowthPanel() {
                       key={question}
                       type="button"
                       className={cn(
-                        "flex w-full items-start gap-1.5 border-b border-[#f0ece2] px-1.5 py-1 text-left text-[10px] leading-snug transition-colors last:border-0 hover:bg-[#f7f4ed]",
-                        checked ? "text-[#2b2b2b]" : "text-[#6b6455]",
+                        "flex w-full items-start gap-1.5 border-b border-paper-line-faint px-1.5 py-1 text-left text-pc-xs leading-snug transition-colors last:border-0 hover:bg-paper-hover",
+                        checked ? "text-ink" : "text-ink-muted",
                       )}
                       onClick={() => {
                         const next = [...answers];
@@ -274,8 +274,8 @@ export function GrowthPanel() {
                         className={cn(
                           "mt-px flex h-3 w-3 shrink-0 items-center justify-center rounded-sm border",
                           checked
-                            ? "border-[#2b2b2b] bg-[#2b2b2b] text-white"
-                            : "border-[#c9c2b4] bg-white",
+                            ? "border-ink bg-ink text-white"
+                            : "border-paper-line-hover bg-white",
                         )}
                       >
                         {checked ? <Check className="h-2.5 w-2.5" strokeWidth={3} /> : null}
@@ -288,9 +288,9 @@ export function GrowthPanel() {
             ) : null}
           </div>
 
-          <div className="mt-1 space-y-0.5 border-t border-dashed border-[#e8e2d6] pt-1">
+          <div className="mt-1 space-y-0.5 border-t border-dashed border-paper-line-faint pt-1">
             <div className="flex items-center justify-between">
-              <span className="text-[11px]">当前经验</span>
+              <span className="text-pc-sm">当前经验</span>
               <PaperStepper
                 value={exp}
                 min={0}
@@ -299,7 +299,7 @@ export function GrowthPanel() {
               />
             </div>
             <div className="flex items-center justify-between">
-              <span className="text-[11px]">道具点</span>
+              <span className="text-pc-sm">道具点</span>
               <PaperStepper
                 value={character.resources.itemPoints ?? 0}
                 min={0}
@@ -311,7 +311,7 @@ export function GrowthPanel() {
         </div>
 
         <div>
-          <div className="mb-1 text-[10px] font-semibold text-[#6b6455]">花费经验</div>
+          <div className="mb-1 text-pc-xs font-semibold text-ink-muted">花费经验</div>
 
           <div className="grid gap-1.5 sm:grid-cols-3">
             <UpgradeCard
@@ -336,12 +336,12 @@ export function GrowthPanel() {
                   setInsightAttribute(value === CLEAR_VALUE ? "" : (value as AttributeId))
                 }
               >
-                <SelectTrigger className="h-6 text-[11px]">
+                <SelectTrigger className="h-6 text-pc-sm">
                   <SelectValue placeholder="选择属性" />
                 </SelectTrigger>
                 <SelectContent>
                   {insightAttribute ? (
-                    <SelectItem value={CLEAR_VALUE} className="text-[#8b8474]">
+                    <SelectItem value={CLEAR_VALUE} className="text-ink-hint">
                       清除选择
                     </SelectItem>
                   ) : null}
@@ -375,7 +375,7 @@ export function GrowthPanel() {
                 value={imprintId}
                 onValueChange={(value) => setImprintId(value === CLEAR_VALUE ? "" : value)}
               >
-                <SelectTrigger className="h-6 text-[11px]">
+                <SelectTrigger className="h-6 text-pc-sm">
                   <SelectValue
                     placeholder={imprintOptions.length > 0 ? "选择印记" : "暂无可锻造印记"}
                   />
@@ -384,7 +384,7 @@ export function GrowthPanel() {
                   {imprintOptions.length > 0 ? (
                     <>
                       {imprintId ? (
-                        <SelectItem value={CLEAR_VALUE} className="text-[#8b8474]">
+                        <SelectItem value={CLEAR_VALUE} className="text-ink-hint">
                           清除选择
                         </SelectItem>
                       ) : null}
@@ -395,24 +395,24 @@ export function GrowthPanel() {
                       ))}
                     </>
                   ) : (
-                    <div className="px-2 py-1.5 text-[10px] text-[#8b8474]">
+                    <div className="px-2 py-1.5 text-pc-xs text-ink-hint">
                       所有可用印记都已拥有
                     </div>
                   )}
                 </SelectContent>
               </Select>
               {selectedImprint ? (
-                <div className="rounded border border-[#e8e2d6] bg-[#f7f4ed] px-1.5 py-1">
-                  <div className="flex items-center justify-between gap-1 text-[10px] font-medium">
+                <div className="rounded border border-paper-line-faint bg-paper-hover px-1.5 py-1">
+                  <div className="flex items-center justify-between gap-1 text-pc-xs font-medium">
                     <span className="truncate">{selectedImprint.name}</span>
-                    <span className="shrink-0 text-[9px] font-normal text-[#8b8474]">效果</span>
+                    <span className="shrink-0 text-pc-xs font-normal text-ink-hint">效果</span>
                   </div>
-                  <p className="mt-0.5 whitespace-pre-line text-[10px] leading-snug text-[#4a4438]">
+                  <p className="mt-0.5 whitespace-pre-line text-pc-xs leading-snug text-ink-soft">
                     {selectedImprint.description}
                   </p>
                 </div>
               ) : (
-                <p className="rounded border border-dashed border-[#e8e2d6] px-1.5 py-1.5 text-[9px] leading-snug text-[#8b8474]">
+                <p className="rounded border border-dashed border-paper-line-faint px-1.5 py-1.5 text-pc-xs leading-snug text-ink-hint">
                   {imprintOptions.length > 0 ? "选择印记后可预览效果。" : "已拥有全部可用印记。"}
                 </p>
               )}
@@ -446,7 +446,7 @@ export function GrowthPanel() {
             >
               {replacing ? (
                 <Select value={replacedTag} onValueChange={setReplacedTag}>
-                  <SelectTrigger className="h-6 text-[11px]">
+                  <SelectTrigger className="h-6 text-pc-sm">
                     <SelectValue
                       placeholder={
                         character.experienceTags.length > 0 ? "选择要替换的标签" : "暂无可替换标签"
@@ -461,7 +461,7 @@ export function GrowthPanel() {
                         </SelectItem>
                       ))
                     ) : (
-                      <div className="px-2 py-1.5 text-[10px] text-[#8b8474]">暂无可替换标签</div>
+                      <div className="px-2 py-1.5 text-pc-xs text-ink-hint">暂无可替换标签</div>
                     )}
                   </SelectContent>
                 </Select>
@@ -477,7 +477,7 @@ export function GrowthPanel() {
             </UpgradeCard>
           </div>
 
-          {error ? <p className="mt-1 text-[10px] text-destructive">{error}</p> : null}
+          {error ? <p className="mt-1 text-pc-xs text-destructive">{error}</p> : null}
         </div>
       </div>
     </Block>

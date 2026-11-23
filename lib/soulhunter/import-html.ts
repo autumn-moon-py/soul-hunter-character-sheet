@@ -88,8 +88,6 @@ export function normalizeImportedCharacter(raw: unknown): SoulHunterCharacter | 
     codename: stringOr(identityRaw.codename, base.identity.codename),
     gender: optionalString(identityRaw.gender) ?? base.identity.gender,
     age: optionalString(identityRaw.age) ?? base.identity.age,
-    appearance: optionalString(identityRaw.appearance) ?? base.identity.appearance,
-    personality: optionalString(identityRaw.personality) ?? base.identity.personality,
     background: optionalString(identityRaw.background) ?? base.identity.background,
   };
   const avatar = optionalString(identityRaw.avatar);

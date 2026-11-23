@@ -36,9 +36,10 @@ export type CharacterOperation =
     }
   | { op: "setExperienceTags"; tags: string[] }
   | { op: "setSoulWeaponName"; value: string }
+  | { op: "setPockets"; value: string }
   | {
       op: "setIdentityField";
-      field: "name" | "codename" | "gender" | "age" | "appearance" | "personality" | "background";
+      field: "name" | "codename" | "gender" | "age" | "background";
       value: string;
     };
 
@@ -216,6 +217,10 @@ export function simulateOps(
       }
       case "setSoulWeaponName": {
         next.soulWeapon = { ...(next.soulWeapon ?? { name: "" }), name: op.value };
+        break;
+      }
+      case "setPockets": {
+        next.pockets = op.value;
         break;
       }
       case "setIdentityField": {

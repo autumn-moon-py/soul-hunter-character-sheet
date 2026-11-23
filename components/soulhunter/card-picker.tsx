@@ -140,7 +140,7 @@ const CardRow = memo(function CardRow({
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-1.5">
-            <span className="text-[15px] font-medium">{card.name}</span>
+            <span className="text-sm font-medium">{card.name}</span>
             {base ? <MetaBadge tone="accent">天生</MetaBadge> : null}
             {"secret" in card && card.secret ? <MetaBadge tone="outline">秘传</MetaBadge> : null}
             {card.expansion ? (
@@ -149,7 +149,7 @@ const CardRow = memo(function CardRow({
             {card.kind === "spell" ? <MetaBadge>{card.category}</MetaBadge> : null}
             {card.kind === "spell" ? <MetaBadge>{card.type}</MetaBadge> : null}
           </div>
-          <div className="mt-1 flex flex-wrap gap-x-3 gap-y-0.5 text-[11px] text-muted-foreground">
+          <div className="mt-1 flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-muted-foreground">
             {"cost" in card ? <span>消耗：{card.cost}</span> : null}
             {"target" in card ? <span>目标：{card.target}</span> : null}
           </div>

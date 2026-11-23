@@ -30,7 +30,7 @@ export function QuotaBar({
           style={{ width: `${ratio * 100}%` }}
         />
       </div>
-      {detail ? <p className="text-[10px] leading-tight text-muted-foreground">{detail}</p> : null}
+      {detail ? <p className="text-xs leading-tight text-muted-foreground">{detail}</p> : null}
     </div>
   );
 }
@@ -59,7 +59,7 @@ export function MetaBadge({
   return (
     <span
       className={cn(
-        "inline-flex items-center rounded border px-1.5 py-0 text-[10px] font-normal leading-5",
+        "inline-flex items-center rounded border px-1.5 py-0 text-xs font-normal leading-5",
         styles,
       )}
     >

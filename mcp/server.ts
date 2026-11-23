@@ -94,13 +94,8 @@ async function ensureDaemon(): Promise<Health> {
   );
 }
 
-async function callDaemon(
-  name: string,
-  args: unknown,
-): Promise<{ ok: boolean; data?: unknown; error?: string; warnings?: string[] }> {
-  if (!bridgeToken) await ensureDaemon();
-
-  const response = await fetch(`${BASE_URL}/call`, {
+async function postCall(name: string, args: unknown): Promise<Response> {
+  return fetch(`${BASE_URL}/call`, {
     method: "POST",
     headers: {
       "content-type": "application/json",
@@ -108,6 +103,26 @@ async function callDaemon(
     },
     body: JSON.stringify({ name, args }),
   });
+}
+
+async function callDaemon(
+  name: string,
+  args: unknown,
+): Promise<{ ok: boolean; data?: unknown; error?: string; warnings?: string[] }> {
+  if (!bridgeToken) await ensureDaemon();
+
+  let response: Response;
+  try {
+    response = await postCall(name, args);
+    // 守护进程重启后 token 会变化，重新握手后再试一次
+    if (response.status === 401) {
+      await ensureDaemon();
+      response = await postCall(name, args);
+    }
+  } catch {
+    await ensureDaemon();
+    response = await postCall(name, args);
+  }
 
   return (await response.json()) as {
     ok: boolean;

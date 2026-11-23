@@ -35,10 +35,13 @@ export function StyleBlock() {
   const selectedStyles = styleOptions.filter((style) => selectedStyleIds.includes(style.id));
   const showEditor = editing || selectedStyleIds.length === 0;
   const universalActions = catalog.styleActions.filter((action) => action.style === "通用");
-  const actions = character.style.actionIds.flatMap((id) => {
-    const card = catalog.byId.get(id);
-    return card && card.kind === "styleAction" ? [card] : [];
-  });
+  const actions = character.style.actionIds
+    .flatMap((id) => {
+      const card = catalog.byId.get(id);
+      return card && card.kind === "styleAction" ? [card] : [];
+    })
+    // 无论存档里的录入顺序如何，展示时按时髦值升序排列（5 → 50）
+    .sort((a, b) => a.cost - b.cost);
 
   const rebuildActionIds = (styleIds: string[]) => {
     if (styleIds.length === 0) return [];
@@ -112,20 +115,20 @@ export function StyleBlock() {
       {actions.map((action) => (
         <div
           key={action.id}
-          className="border-b border-dashed border-[#e8e2d6] pb-1 last:border-0 last:pb-0"
+          className="border-b border-dashed border-paper-line-faint pb-1 last:border-0 last:pb-0"
         >
           <div className="flex items-baseline justify-between gap-2">
             <span className="flex min-w-0 items-center gap-1">
-              <span className="truncate text-[11px] font-medium">{action.name}</span>
+              <span className="truncate text-pc-sm font-medium">{action.name}</span>
               {action.style === "通用" ? (
-                <span className="shrink-0 rounded border border-[#d9d2c4] px-1 text-[8px] leading-4 text-[#8b8474]">
+                <span className="shrink-0 rounded border border-paper-line px-1 text-pc-xs leading-4 text-ink-hint">
                   通用
                 </span>
               ) : null}
             </span>
-            <span className="shrink-0 text-[9px] text-[#8b8474]">{action.cost} 时髦值</span>
+            <span className="shrink-0 text-pc-xs text-ink-hint">{action.cost} 时髦值</span>
           </div>
-          <p className="whitespace-pre-line text-[10px] leading-snug text-[#4a4438]">
+          <p className="whitespace-pre-line text-pc-sm leading-snug text-ink-soft">
             {action.effect}
           </p>
         </div>
@@ -143,12 +146,12 @@ export function StyleBlock() {
       }
     >
       <div className="mb-1.5 flex items-center justify-between">
-        <div className="inline-flex overflow-hidden rounded border border-[#d9d2c4]">
+        <div className="inline-flex overflow-hidden rounded border border-paper-line">
           <button
             type="button"
             className={cn(
-              "px-2 py-0.5 text-[10px]",
-              mode !== "combined" ? "bg-[#2b2b2b] text-white" : "bg-white text-[#4a4438]",
+              "px-2 py-0.5 text-pc-xs",
+              mode !== "combined" ? "bg-ink text-white" : "bg-white text-ink-soft",
             )}
             onClick={() => mode === "combined" && toggleCombined(false)}
           >
@@ -157,8 +160,8 @@ export function StyleBlock() {
           <button
             type="button"
             className={cn(
-              "px-2 py-0.5 text-[10px]",
-              mode === "combined" ? "bg-[#2b2b2b] text-white" : "bg-white text-[#4a4438]",
+              "px-2 py-0.5 text-pc-xs",
+              mode === "combined" ? "bg-ink text-white" : "bg-white text-ink-soft",
             )}
             onClick={() => mode !== "combined" && toggleCombined(true)}
           >
@@ -167,13 +170,13 @@ export function StyleBlock() {
         </div>
         {mode === "combined" ? (
           <div className="flex items-center gap-1.5">
-            <span className="text-[9px] text-[#8b8474]">
+            <span className="text-pc-xs text-ink-hint">
               已选 {selectedStyleIds.length} 个风格
             </span>
             {selectedStyleIds.length > 0 ? (
               <button
                 type="button"
-                className="rounded border border-[#d9d2c4] px-1.5 py-0.5 text-[9px] text-[#4a4438] transition-colors hover:bg-[#f4f4f5]"
+                className="rounded border border-paper-line px-1.5 py-0.5 text-pc-xs text-ink-soft transition-colors hover:bg-paper-hover"
                 onClick={() => setEditing((value) => !value)}
               >
                 {showEditor ? "完成" : "编辑"}
@@ -201,7 +204,7 @@ export function StyleBlock() {
             </Line>
 
             <div>
-              <div className="text-[9px] text-[#8b8474]">选择风格</div>
+              <div className="text-pc-xs text-ink-hint">选择风格</div>
               <div className="mt-1 flex flex-wrap gap-1">
                 {styleOptions.map((style) => {
                   const active = selectedStyleIds.includes(style.id);
@@ -210,10 +213,10 @@ export function StyleBlock() {
                       key={style.id}
                       type="button"
                       className={cn(
-                        "rounded border px-1.5 py-0.5 text-[10px] transition-colors",
+                        "rounded border px-1.5 py-0.5 text-pc-xs transition-colors",
                         active
-                          ? "border-[#2b2b2b] bg-[#2b2b2b] text-white"
-                          : "border-[#d9d2c4] bg-[#f7f4ed] text-[#4a4438] hover:border-[#a1a1aa]",
+                          ? "border-ink bg-ink text-white"
+                          : "border-paper-line bg-paper-hover text-ink-soft hover:border-paper-line-hover",
                       )}
                       onClick={() => toggleStyle(style.id)}
                     >
@@ -225,7 +228,7 @@ export function StyleBlock() {
             </div>
 
             {selectedStyleIds.length === 0 ? (
-              <p className="rounded border border-dashed border-[#d9d2c4] px-2 py-3 text-center text-[10px] text-[#8b8474]">
+              <p className="rounded border border-dashed border-paper-line px-2 py-3 text-center text-pc-xs text-ink-hint">
                 尚未选择风格。先选择一个或多个风格，再为每档消耗选择动作。
               </p>
             ) : (
@@ -247,12 +250,12 @@ export function StyleBlock() {
                 );
                 return (
                   <div key={cost} className="flex items-center gap-2">
-                    <span className="w-12 shrink-0 text-[10px] text-[#6b6455]">{cost} 点</span>
+                    <span className="w-12 shrink-0 text-pc-xs text-ink-muted">{cost} 点</span>
                     <Select
                       value={currentId ?? ""}
                       onValueChange={(value) => setCostAction(cost, value)}
                     >
-                      <SelectTrigger className="h-6 text-[11px]">
+                      <SelectTrigger className="h-6 text-pc-sm">
                         <SelectValue placeholder="选择动作" />
                       </SelectTrigger>
                       <SelectContent>
@@ -272,7 +275,7 @@ export function StyleBlock() {
 
           <div>
             {selectedStyleIds.length === 0 ? (
-              <p className="flex min-h-[96px] items-center justify-center rounded border border-dashed border-[#d9d2c4] px-3 py-3 text-center text-[10px] text-[#8b8474]">
+              <p className="flex min-h-[96px] items-center justify-center rounded border border-dashed border-paper-line px-3 py-3 text-center text-pc-xs text-ink-hint">
                 选择风格后，这里会显示可用动作和效果。
               </p>
             ) : (
@@ -283,10 +286,10 @@ export function StyleBlock() {
       ) : (
         <div className="space-y-1.5">
           <div className="flex flex-wrap items-baseline justify-between gap-1">
-            <span className="text-[11px] font-semibold">
+            <span className="text-pc-sm font-semibold">
               {character.style.name?.trim() || "组合风格"}
             </span>
-            <span className="text-[9px] text-[#8b8474]">
+            <span className="text-pc-xs text-ink-hint">
               {selectedStyles.map((style) => style.name).join(" + ")}
             </span>
           </div>
@@ -299,11 +302,11 @@ export function StyleBlock() {
             value={character.style.styleId ?? ""}
             onValueChange={(value) => setStyle(value === "none" ? "" : value)}
           >
-            <SelectTrigger className="h-6 text-[11px]">
+            <SelectTrigger className="h-6 text-pc-sm">
               <SelectValue placeholder="选择风格" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="none" className="text-[#8b8474]">
+              <SelectItem value="none" className="text-ink-hint">
                 不选择
               </SelectItem>
               {styleOptions.map((style) => (

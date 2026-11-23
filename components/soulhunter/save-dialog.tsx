@@ -182,14 +182,14 @@ export function SaveDialog({
                   className={cn(
                     "flex items-center gap-3 rounded-md border px-3 py-2 transition-colors",
                     active
-                      ? "cursor-default border-[#d8cfb8] bg-[#f7f4ed]"
+                      ? "cursor-default border-paper-line-hover bg-paper-hover"
                       : "cursor-pointer border-zinc-200 hover:bg-zinc-50",
                   )}
                 >
                   <span
                     className={cn(
                       "flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-medium",
-                      active ? "bg-[#e6dcc3] text-[#6b5836]" : "bg-zinc-100 text-zinc-500",
+                      active ? "bg-paper-tint text-ink-soft" : "bg-zinc-100 text-zinc-500",
                     )}
                   >
                     {index + 1}
@@ -213,17 +213,17 @@ export function SaveDialog({
                         <div className="flex items-center gap-1.5">
                           <span className="truncate text-sm font-medium">{save.name}</span>
                           {save.codename ? (
-                            <span className="truncate text-[11px] text-muted-foreground">
+                            <span className="truncate text-xs text-muted-foreground">
                               {save.codename}
                             </span>
                           ) : null}
                           {active ? (
-                            <span className="rounded bg-[#e6dcc3] px-1 text-[9px] leading-4 text-[#6b5836]">
+                            <span className="rounded bg-paper-tint px-1 text-xs leading-4 text-ink-soft">
                               当前
                             </span>
                           ) : null}
                         </div>
-                        <div className="text-[10px] text-muted-foreground">
+                        <div className="text-xs text-muted-foreground">
                           灵识 {save.insight} · {formatTime(save.updatedAt)}
                         </div>
                       </>
@@ -280,7 +280,7 @@ export function SaveDialog({
               type="button"
               size="sm"
               variant="outline"
-              className="w-full border-[#d8cfb8] bg-[#f7f4ed] text-[#6b5836] hover:bg-[#efe9da] hover:text-[#6b5836]"
+              className="w-full border-paper-line-hover bg-paper-hover text-ink-soft hover:bg-paper-tint hover:text-ink-soft"
               onClick={createNew}
             >
               <Plus className="mr-1.5 h-3.5 w-3.5" />
@@ -298,7 +298,7 @@ export function SaveDialog({
             </Button>
           </div>
           {importError ? (
-            <p className="mt-2 text-[11px] text-destructive">{importError}</p>
+            <p className="mt-2 text-xs text-destructive">{importError}</p>
           ) : null}
         </div>
 

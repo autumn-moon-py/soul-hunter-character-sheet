@@ -1,5 +1,5 @@
 import { execFile } from "node:child_process";
-import { promises as fs } from "node:fs";
+import { existsSync, promises as fs } from "node:fs";
 import path from "node:path";
 import { promisify } from "node:util";
 import { catalog } from "../../src/content";
@@ -12,6 +12,20 @@ const execFileAsync = promisify(execFile);
 
 export const ALLOWED_CHECKS = ["typecheck", "test", "validate:content"] as const;
 export type ProjectCheckName = (typeof ALLOWED_CHECKS)[number];
+
+/** Windows 下 execFile 直接调用 npm 会 ENOENT，改用 node 执行 npm-cli.js，仍不经过 shell */
+function npmInvocation(script: ProjectCheckName): { command: string; args: string[] } {
+  if (process.platform === "win32") {
+    const cli = path.join(
+      path.dirname(process.execPath),
+      "node_modules/npm/bin/npm-cli.js",
+    );
+    if (existsSync(cli)) {
+      return { command: process.execPath, args: [cli, "run", script] };
+    }
+  }
+  return { command: "npm", args: ["run", script] };
+}
 
 interface ReportIssue {
   level: "error" | "warning" | "info";
@@ -146,7 +160,8 @@ export async function runProjectChecks(
 
     const startedAt = Date.now();
     try {
-      const { stdout, stderr } = await execFileAsync("npm", ["run", name], {
+      const { command, args } = npmInvocation(name);
+      const { stdout, stderr } = await execFileAsync(command, args, {
         cwd: projectRoot,
         timeout: 120_000,
         maxBuffer: 200 * 1024,

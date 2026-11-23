@@ -10,5 +10,6 @@ out/
 .dev.vars*
 mcp/dist/
 ai-backups/
+logs/
 
 .iga/

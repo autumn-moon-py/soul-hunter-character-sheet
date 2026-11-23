@@ -70,21 +70,21 @@ function CardEntry({
   const long = body.length > 48;
 
   return (
-    <article className={cn("group rounded border border-[#d9d2c4]", compact ? "p-1" : "p-1.5")}>
+    <article className={cn("group rounded border border-paper-line", compact ? "p-1" : "p-1.5")}>
       <div className="flex items-start justify-between gap-1">
-        <span className="min-w-0 text-[12px] font-medium leading-tight">{card.name}</span>
+        <span className="min-w-0 text-pc-md font-medium leading-tight">{card.name}</span>
         <span className="flex shrink-0 items-center gap-1">
           {isBaseCard(kind, card.id) ? (
-            <span className="text-[9px] text-[#8b8474]">天生</span>
+            <span className="text-pc-xs text-ink-hint">天生</span>
           ) : null}
           {"secret" in card && card.secret ? (
-            <span className="text-[9px] text-[#8b8474]">秘传</span>
+            <span className="text-pc-xs text-ink-hint">秘传</span>
           ) : null}
           {removable ? (
             <span className="hidden items-center gap-1 group-hover:flex">
               <button
                 type="button"
-                className="text-[9px] text-[#8b8474] hover:text-[#232323]"
+                className="text-pc-xs text-ink-hint hover:text-ink"
                 onClick={onReplace}
               >
                 替换
@@ -92,7 +92,7 @@ function CardEntry({
               <button
                 type="button"
                 aria-label={`移除${card.name}`}
-                className="text-[#8b8474] hover:text-destructive"
+                className="text-ink-hint hover:text-destructive"
                 onClick={onRemove}
               >
                 <X className="h-3 w-3" />
@@ -104,14 +104,14 @@ function CardEntry({
 
       {compact ? (
         (meta || long) ? (
-          <div className="flex items-baseline justify-between gap-2 text-[9px] text-[#6b6455]">
+          <div className="flex items-baseline justify-between gap-2 text-pc-xs text-ink-muted">
             <span className="min-w-0">{meta}</span>
             {long ? (
               <button
                 type="button"
                 data-export-expand
                 data-export-label
-                className="shrink-0 text-[#8b8474] hover:text-[#3f3f46]"
+                className="shrink-0 text-ink-hint hover:text-ink-soft"
                 onClick={() => setExpanded((value) => !value)}
               >
                 {expanded ? "收起" : "展开"}
@@ -120,7 +120,7 @@ function CardEntry({
           </div>
         ) : null
       ) : meta ? (
-        <div className="text-[9px] text-[#6b6455]">{meta}</div>
+        <div className="text-pc-xs text-ink-muted">{meta}</div>
       ) : null}
 
       {body ? (
@@ -129,14 +129,14 @@ function CardEntry({
             data-export-collapsible
             data-export-clamp="line-clamp-2"
             className={cn(
-              "mt-0.5 whitespace-pre-line text-[10px] leading-snug text-[#4a4438]",
+              "mt-0.5 whitespace-pre-line text-pc-sm leading-snug text-ink-soft",
               long && !expanded && "line-clamp-2",
             )}
           >
             {body}
           </p>
         ) : (
-          <div className="mt-0.5 border-t border-dashed border-[#e8e2d6] pt-0.5">
+          <div className="mt-0.5 border-t border-dashed border-paper-line-faint pt-0.5">
             <button
               type="button"
               data-export-expand
@@ -148,7 +148,7 @@ function CardEntry({
                 data-export-collapsible
                 data-export-clamp="line-clamp-3"
                 className={cn(
-                  "block whitespace-pre-line text-[10px] leading-snug text-[#4a4438]",
+                  "block whitespace-pre-line text-pc-sm leading-snug text-ink-soft",
                   long && !expanded && "line-clamp-3",
                 )}
               >
@@ -160,7 +160,7 @@ function CardEntry({
                 type="button"
                 data-export-expand
                 data-export-label
-                className="mt-0.5 text-[9px] text-[#8b8474] hover:text-[#3f3f46]"
+                className="mt-0.5 text-pc-xs text-ink-hint hover:text-ink-soft"
                 onClick={() => setExpanded((value) => !value)}
               >
                 {expanded ? "收起" : "展开"}
@@ -202,7 +202,7 @@ export function CardSection({
 
   const content =
     quota.max === 0 && cards.length === 0 ? (
-      <p className="flex items-center justify-center rounded border border-dashed border-[#d9d2c4] py-3 text-[10px] text-[#8b8474]">
+      <p className="flex items-center justify-center rounded border border-dashed border-paper-line py-3 text-pc-xs text-ink-hint">
         未解锁
       </p>
     ) : (
@@ -222,7 +222,7 @@ export function CardSection({
         {canAdd ? (
           <button
             type="button"
-            className="flex min-h-[38px] items-center justify-center gap-1 self-start rounded border border-dashed border-[#d9d2c4] text-[10px] text-[#8b8474] transition-colors hover:border-[#a1a1aa] hover:text-[#3f3f46]"
+            className="flex min-h-[38px] items-center justify-center gap-1 self-start rounded border border-dashed border-paper-line text-pc-xs text-ink-hint transition-colors hover:border-paper-line-hover hover:text-ink-soft"
             onClick={() => openPicker()}
           >
             <Plus className="h-3 w-3" />
@@ -248,9 +248,9 @@ export function CardSection({
     return (
       <>
         <div>
-          <div className="flex h-6 items-center justify-between border-b border-[#d9d2c4] bg-[#f2eee4] px-2 text-[10px] font-medium text-[#4a4438]">
+          <div className="flex h-6 items-center justify-between border-b border-paper-line bg-paper-tint px-2 text-pc-xs font-medium text-ink-soft">
             <span>{CARD_KIND_LABEL[kind]}</span>
-            <span className="text-[9px] tabular-nums">
+            <span className="text-pc-xs tabular-nums">
               {quota.used} / {quota.max}
             </span>
           </div>

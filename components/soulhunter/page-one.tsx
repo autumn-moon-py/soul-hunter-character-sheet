@@ -49,8 +49,8 @@ function StrengthDots({ value }: { value: number }) {
         <span
           key={step}
           className={cn(
-            "h-2 w-2 rounded-full border border-[#2b2b2b]",
-            step <= value ? "bg-[#2b2b2b]" : "bg-transparent",
+            "h-2 w-2 rounded-full border border-ink",
+            step <= value ? "bg-ink" : "bg-transparent",
           )}
         />
       ))}
@@ -150,6 +150,15 @@ function InfoBlock() {
   const character = useCharacterStore((state) => state.character);
   const setIdentityField = useCharacterStore((state) => state.setIdentityField);
   const setBond = useCharacterStore((state) => state.setBond);
+  const backgroundRef = useRef<HTMLTextAreaElement>(null);
+
+  // 背景故事默认 3 行，随内容自动撑高
+  useLayoutEffect(() => {
+    const element = backgroundRef.current;
+    if (!element) return;
+    element.style.height = "auto";
+    element.style.height = `${element.scrollHeight}px`;
+  }, [character.identity.background]);
 
   const categories = Array.from(new Set(catalog.bonds.map((bond) => bond.category)));
   const bondOptions = catalog.bonds.filter((bond) => bond.category === character.bond?.category);
@@ -161,7 +170,7 @@ function InfoBlock() {
   return (
     <Block title="角色信息" flush>
       <div className="grid grid-cols-2">
-        <Line label="姓名" labelWidth={56} className="border-r border-[#d9d2c4]">
+        <Line label="姓名" labelWidth={56} className="border-r border-paper-line">
           <Input
             className="text-center"
             value={character.identity.name}
@@ -177,7 +186,7 @@ function InfoBlock() {
         </Line>
       </div>
       <div className="grid grid-cols-2">
-        <Line label="性别" labelWidth={56} className="border-r border-[#d9d2c4]">
+        <Line label="性别" labelWidth={56} className="border-r border-paper-line">
           <Input
             className="text-center"
             value={character.identity.gender ?? ""}
@@ -193,12 +202,12 @@ function InfoBlock() {
         </Line>
       </div>
       <div className="grid grid-cols-2">
-        <Line label="羁绊" labelWidth={56} className="border-r border-[#d9d2c4]">
+        <Line label="羁绊" labelWidth={56} className="border-r border-paper-line">
           <Select
             value={character.bond?.category ?? ""}
             onValueChange={(value) => setBond(value === "none" ? "" : value, "")}
           >
-            <SelectTrigger className="h-[22px] text-[11px] [&>span]:flex-1 [&>span]:text-center">
+            <SelectTrigger className="h-[22px] text-pc-sm [&>span]:flex-1 [&>span]:text-center">
               <SelectValue placeholder="未选" />
             </SelectTrigger>
             <SelectContent>
@@ -219,7 +228,7 @@ function InfoBlock() {
             }
             disabled={!character.bond?.category}
           >
-            <SelectTrigger className="h-[22px] text-[11px] [&>span]:flex-1 [&>span]:text-center">
+            <SelectTrigger className="h-[22px] text-pc-sm [&>span]:flex-1 [&>span]:text-center">
               <SelectValue placeholder="未选" />
             </SelectTrigger>
             <SelectContent>
@@ -234,14 +243,16 @@ function InfoBlock() {
         </Line>
       </div>
       <div>
-        <div className="flex h-6 items-center justify-center border-b border-[#d9d2c4] bg-[#f2eee4] px-2 text-[10px] font-medium text-[#4a4438]">
+        <div className="flex h-6 items-center justify-center border-b border-paper-line bg-paper-tint px-2 text-pc-xs font-medium text-ink-soft">
           背景故事
         </div>
         <Textarea
+          ref={backgroundRef}
           value={character.identity.background ?? ""}
-          rows={6}
+          rows={3}
           aria-label="背景故事"
           placeholder={backgroundPlaceholder}
+          className="resize-none overflow-hidden"
           style={{ padding: "4px 8px" }}
           onChange={(event) => setIdentityField("background", event.target.value)}
         />
@@ -278,8 +289,8 @@ function SkillsBlock() {
         <tbody>
           {SKILLS.map((skill) => (
             <tr key={skill.id}>
-              <td className="text-center text-[11px]">{skill.name}</td>
-              <td className="pc-skill-value text-center text-[#6b6455] tabular-nums">{derived.skillBase[skill.id as SkillId]}</td>
+              <td className="text-center text-pc-sm">{skill.name}</td>
+              <td className="pc-skill-value text-center text-ink-muted tabular-nums">{derived.skillBase[skill.id as SkillId]}</td>
               <td>
                 <span className="flex justify-center">
                   <PaperStepper
@@ -305,17 +316,17 @@ function AttributesBlock() {
   const character = useCharacterStore((state) => state.character);
   const setInsight = useCharacterStore((state) => state.setInsight);
   const derived = useMemo(() => derive(character), [character]);
-  const resourceClass = "w-full text-center text-[14px] tabular-nums";
-  const bigClass = "w-full text-center text-[16px] font-semibold tabular-nums";
+  const resourceClass = "w-full text-center text-pc-lg tabular-nums";
+  const bigClass = "w-full text-center text-pc-xl font-semibold tabular-nums";
 
   return (
     <Block title="基础属性">
       <div className="grid grid-cols-3 gap-1">
         {(Object.keys(ATTRIBUTE_LABEL) as AttributeId[]).map((attribute) => (
-          <div key={attribute} className="rounded border border-[#d9d2c4] px-1 py-1">
+          <div key={attribute} className="rounded border border-paper-line px-1 py-1">
             <div className="flex items-center justify-between gap-1">
-              <span className="text-[10px] font-semibold">{ATTRIBUTE_LABEL[attribute]}</span>
-              <span className="rounded border border-[#d9d2c4] bg-[#f2eee4] px-1 py-px text-[9px] font-semibold leading-none text-[#4a4438]">
+              <span className="text-pc-xs font-semibold">{ATTRIBUTE_LABEL[attribute]}</span>
+              <span className="rounded border border-paper-line bg-paper-tint px-1 py-px text-pc-xs font-semibold leading-none text-ink-soft">
                 {derived.grades[attribute]}
               </span>
             </div>
@@ -330,13 +341,13 @@ function AttributesBlock() {
       </div>
 
       <div className="mt-1 grid grid-cols-2">
-        <Line label="生命" labelWidth={44} className="border-r border-[#d9d2c4]">
+        <Line label="生命" labelWidth={44} className="border-r border-paper-line">
           <span className={resourceClass}>{derived.hpMax}</span>
         </Line>
         <Line label="灵力" labelWidth={44}>
           <span className={resourceClass}>{derived.mpMax}</span>
         </Line>
-        <Line label="灵识" labelWidth={44} className="border-r border-[#d9d2c4]">
+        <Line label="灵识" labelWidth={44} className="border-r border-paper-line">
           <EditableNumber
             value={character.insight}
             min={BASE.insight}
@@ -348,7 +359,7 @@ function AttributesBlock() {
         <Line label="防御" labelWidth={44}>
           <span className={bigClass}>{derived.defense}</span>
         </Line>
-        <Line label="时髦" labelWidth={44} className="border-r border-[#d9d2c4]">
+        <Line label="时髦" labelWidth={44} className="border-r border-paper-line">
           <span className={resourceClass}>{character.resources.stylePoints ?? 0}</span>
         </Line>
         <Line label="道具" labelWidth={44}>
@@ -376,11 +387,11 @@ function SpecialtySelect({
       onValueChange={(next) => onChange(next === "none" ? "" : next)}
       disabled={disabled}
     >
-      <SelectTrigger className="h-[22px] text-[11px] [&>span]:flex-1 [&>span]:text-center">
+      <SelectTrigger className="h-[22px] text-pc-sm [&>span]:flex-1 [&>span]:text-center">
         <SelectValue placeholder={placeholder} />
       </SelectTrigger>
       <SelectContent>
-        <SelectItem value="none" className="text-[#8b8474]">
+        <SelectItem value="none" className="text-ink-hint">
           不选择
         </SelectItem>
         {ABILITY_SPECIALTIES.map((item) => (
@@ -409,15 +420,15 @@ function AbilityBlock() {
       meta={`强度 ${derived.strengths.soul} · ${length}/${derived.quotas.abilityChars} 字`}
       flush
     >
-      <div className="grid grid-cols-3">
-        <Line label="名称" labelWidth={44} className="border-r border-[#d9d2c4]">
+      <div className="grid grid-cols-1 sm:grid-cols-3">
+        <Line label="名称" labelWidth={44} className="sm:border-r border-paper-line">
           <Input
             className="text-center"
             value={character.ability.name}
             onChange={(event) => setAbilityField("name", event.target.value)}
           />
         </Line>
-        <Line label="专精1" labelWidth={44} className="border-r border-[#d9d2c4]">
+        <Line label="专精1" labelWidth={44} className="sm:border-r border-paper-line">
           <SpecialtySelect
             value={character.ability.specialization}
             onChange={(value) => setAbilityField("specialization", value)}
@@ -432,25 +443,25 @@ function AbilityBlock() {
           />
         </Line>
       </div>
-      <div className="space-y-0.5 border-t border-[#d9d2c4] px-2 py-1 text-[9px] leading-snug">
+      <div className="space-y-0.5 border-t border-paper-line px-2 py-1 text-pc-sm leading-snug">
         {specialties.length > 0 ? (
           <>
             {specialties.map((item) => (
               <p key={item.name}>
-                <span className="font-semibold text-[#4a4438]">{item.name}</span>
-                <span className="text-[#6b6455]">：{item.description}</span>
+                <span className="font-semibold text-ink-soft">{item.name}</span>
+                <span className="text-ink-soft">：{item.description}</span>
               </p>
             ))}
-            <p className="text-[#8b8474]">
+            <p className="text-ink-hint">
               施展灵能力时选用上述效果，攻击检定成功额外获得 1 个【成功等级】。
             </p>
           </>
         ) : (
-          <p className="text-[#a89f8c]">选择专精后显示对应的通用效果。</p>
+          <p className="text-ink-hint">选择专精后显示对应的通用效果。</p>
         )}
       </div>
       <div>
-        <div className="flex h-6 items-center justify-center border-b border-[#d9d2c4] bg-[#f2eee4] text-[10px] font-medium text-[#4a4438]">
+        <div className="flex h-6 items-center justify-center border-b border-paper-line bg-paper-tint text-pc-xs font-medium text-ink-soft">
           能力描述
         </div>
         <Textarea
@@ -484,57 +495,59 @@ function WeaponBlock() {
 
   return (
     <Block title="灵魂武器" meta={unlocked ? undefined : "未解锁"} flush>
-      <Line label="名称">
-        <Input
-          className="text-center"
-          value={character.soulWeapon?.name ?? ""}
-          disabled={!unlocked}
-          onChange={(event) => setSoulWeaponField("name", event.target.value)}
-        />
-      </Line>
-      <Line label="形态">
-        <div className="flex w-full items-center gap-1">
+      <div className="grid grid-cols-2">
+        <Line label="名称" labelWidth={44} className="border-r border-paper-line">
           <Input
-            value={form}
+            className="text-center"
+            value={character.soulWeapon?.name ?? ""}
             disabled={!unlocked}
-            placeholder="选择或输入形态"
-            aria-label="灵魂武器形态"
-            className="min-w-0 flex-1"
-            onChange={(event) => setSoulWeaponField("form", event.target.value)}
+            onChange={(event) => setSoulWeaponField("name", event.target.value)}
           />
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button
-                type="button"
-                aria-label="选择预设武器形态"
-                disabled={!unlocked}
-                className="flex h-5 w-4 shrink-0 items-center justify-center text-[#8b8474] transition-colors hover:text-[#232323] disabled:opacity-50"
-              >
-                <ChevronDown className="h-3.5 w-3.5" />
-              </button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="max-h-64 w-40 overflow-y-auto">
-              {SOUL_WEAPON_FORM_GROUPS.map((group) => (
-                <Fragment key={group.category}>
-                  <DropdownMenuLabel className="text-[10px] font-normal text-muted-foreground">
-                    {group.category}
-                  </DropdownMenuLabel>
-                  {group.forms.map((item) => (
-                    <DropdownMenuItem
-                      key={item}
-                      className="text-xs"
-                      onSelect={() => setSoulWeaponField("form", item)}
-                    >
-                      {item}
-                    </DropdownMenuItem>
-                  ))}
-                </Fragment>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </div>
-      </Line>
-      <Line label="外形" className="is-auto mb-1.5">
+        </Line>
+        <Line label="形态" labelWidth={44}>
+          <div className="flex w-full items-center gap-1">
+            <Input
+              value={form}
+              disabled={!unlocked}
+              placeholder="选择或输入形态"
+              aria-label="灵魂武器形态"
+              className="min-w-0 flex-1"
+              onChange={(event) => setSoulWeaponField("form", event.target.value)}
+            />
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button
+                  type="button"
+                  aria-label="选择预设武器形态"
+                  disabled={!unlocked}
+                  className="flex h-5 w-4 shrink-0 items-center justify-center text-ink-hint transition-colors hover:text-ink disabled:opacity-50"
+                >
+                  <ChevronDown className="h-3.5 w-3.5" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="max-h-64 w-40 overflow-y-auto">
+                {SOUL_WEAPON_FORM_GROUPS.map((group) => (
+                  <Fragment key={group.category}>
+                    <DropdownMenuLabel className="text-xs font-normal text-muted-foreground">
+                      {group.category}
+                    </DropdownMenuLabel>
+                    {group.forms.map((item) => (
+                      <DropdownMenuItem
+                        key={item}
+                        className="text-xs"
+                        onSelect={() => setSoulWeaponField("form", item)}
+                      >
+                        {item}
+                      </DropdownMenuItem>
+                    ))}
+                  </Fragment>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+        </Line>
+      </div>
+      <Line label="外形" labelWidth={44} className="is-auto mb-1.5">
         <Textarea
           ref={appearanceRef}
           value={appearance}
@@ -556,29 +569,24 @@ function WeaponBlock() {
 export function PageOne() {
   return (
     <Paper>
-      <div className="grid gap-2 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
-        <div className="space-y-2">
+      <div className="sheet-grid">
+        <div className="sheet-col-left space-y-3">
           <InfoBlock />
+          <ExperienceBlock />
           <AttributesBlock />
           <SkillsBlock />
         </div>
 
-        <div className="space-y-2">
+        <div className="sheet-col-middle space-y-3">
           <AbilityBlock />
+          <WeaponBlock />
+          <CardSection kind="specialty" />
+          <PocketsBlock />
+        </div>
 
-          <div className="grid gap-2 md:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
-            <div className="space-y-2">
-              <ExperienceBlock />
-              <WeaponBlock />
-              <CardSection kind="specialty" />
-              <PocketsBlock />
-            </div>
-
-            <div className="space-y-2">
-              <CardSection kind="spell" />
-              <CardSection kind="martial" />
-            </div>
-          </div>
+        <div className="sheet-col-right space-y-3">
+          <CardSection kind="spell" />
+          <CardSection kind="martial" />
         </div>
       </div>
     </Paper>

@@ -66,17 +66,52 @@ body {
   --pc-label-ink: #4a4438;
 
   width: 100%;
-  max-width: 210mm;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 12px;
-  background:
-    radial-gradient(rgba(35, 35, 35, 0.035) 1px, transparent 1px) 0 0 / 7px 7px,
-    #fbf9f4;
-  border: 2px solid var(--pc-line);
-  border-radius: 3px;
-  box-shadow: 0 18px 44px -30px rgba(0, 0, 0, 0.5);
+  padding: 16px;
+  background: #fbf9f4;
+  border: 1px solid var(--pc-line-soft);
+  border-radius: 8px;
+  box-shadow: 0 14px 34px -28px rgba(0, 0, 0, 0.45);
   color: var(--pc-ink);
   font-size: 12px;
+}
+
+/* 纸面主栅格：手机单列，中等屏两列，宽屏三列 */
+.sheet-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.sheet-col-left {
+  grid-area: left;
+}
+
+.sheet-col-middle {
+  grid-area: middle;
+}
+
+.sheet-col-right {
+  grid-area: right;
+}
+
+@media (min-width: 768px) {
+  .sheet-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    grid-template-areas:
+      "left middle"
+      "left right";
+  }
+}
+
+@media (min-width: 1280px) {
+  .sheet-grid {
+    grid-template-columns:
+      minmax(260px, 0.9fr)
+      minmax(0, 1.35fr)
+      minmax(300px, 1fr);
+    grid-template-areas: "left middle right";
+  }
 }
 
 .paper-block {
@@ -108,7 +143,7 @@ body {
   align-items: center;
   gap: 4px;
   color: #d8d2c4;
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 400;
   letter-spacing: 0;
 }
@@ -118,7 +153,7 @@ body {
   border: 2px solid var(--pc-line);
   border-radius: 2px;
   background: rgba(255, 255, 255, 0.55);
-  padding: 8px 8px 6px;
+  padding: 10px 10px 8px;
 }
 
 .paper-block-body.is-flush {
@@ -129,7 +164,7 @@ body {
 .pc-field {
   display: flex;
   min-width: 0;
-  min-height: 34px;
+  min-height: 36px;
   border-bottom: 1px solid var(--pc-line-soft);
 }
 
@@ -188,7 +223,7 @@ body {
 .pc-table th {
   border: 1px solid var(--pc-line-soft);
   background: var(--pc-label);
-  color: #52525b;
+  color: var(--pc-label-ink);
   padding: 2px 4px;
   font-size: 10px;
   font-weight: 600;
@@ -196,7 +231,7 @@ body {
 }
 
 .pc-table td {
-  height: 32px;
+  height: 34px;
   border: 1px solid var(--pc-line-soft);
   padding: 2px 4px;
   font-size: 10px;
@@ -205,7 +240,7 @@ body {
 
 /* 技能表的属性强度 / 技能强度 */
 .pc-table td.pc-skill-value {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .paper-step-button {
@@ -215,11 +250,11 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 3px;
-  color: #71717a;
+  color: #6b6455;
 }
 
 .paper-step-button:hover:not(:disabled) {
-  background: #f4f4f5;
+  background: #f7f4ed;
   color: var(--pc-ink);
 }
 
@@ -285,11 +320,11 @@ body {
 
 .paper input::placeholder,
 .paper textarea::placeholder {
-  color: #a89f8c;
+  color: #8b8474;
 }
 
 .paper button[role="combobox"][data-placeholder] {
-  color: #a89f8c;
+  color: #8b8474;
 }
 
 .paper input:disabled,
@@ -323,7 +358,6 @@ body {
 }
 
 @page {
-  size: A4;
   margin: 10mm;
 }
 

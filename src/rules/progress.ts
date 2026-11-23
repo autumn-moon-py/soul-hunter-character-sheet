@@ -71,14 +71,6 @@ export function buildProgress(character: SoulHunterCharacter): CharacterProgress
     "one",
   );
   add(
-    "appearance",
-    "形象与性格",
-    "外貌、性格、习惯任选填写",
-    filled(character.identity.appearance) || filled(character.identity.personality),
-    "one",
-  );
-
-  add(
     "ability",
     "灵能力名称与描述",
     "两者都要填写，描述受心魂字数限制",

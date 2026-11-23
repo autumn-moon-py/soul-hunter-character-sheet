@@ -155,14 +155,12 @@ body > .paper { margin: 0 auto 14px; }
   padding: 0 2px; font-size: 11px; color: var(--pc-ink);
 }
 .pc-combobox-static.is-center { justify-content: center; }
-.pc-combobox-static[data-placeholder] { color: #a89f8c; }
+.pc-combobox-static[data-placeholder] { color: #8b8474; }
 .export-locked { pointer-events: none; }
 @media print {
   body { padding: 0; background: #fff; }
   .export-toolbar { display: none !important; }
   .export-dice-panel { display: none !important; }
-  .paper { break-after: page; }
-  .paper:last-of-type { break-after: auto; }
 }
 `;
 

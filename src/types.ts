@@ -24,8 +24,6 @@ export interface SoulHunterIdentity {
   avatar?: string;
   gender?: string;
   age?: string;
-  appearance?: string;
-  personality?: string;
   background?: string;
 }
 

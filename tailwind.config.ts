@@ -31,6 +31,13 @@ const config: Config = {
         '7xl': ['72px', { lineHeight: '72px' }],
         '8xl': ['96px', { lineHeight: '96px' }],
         '9xl': ['128px', { lineHeight: '128px' }],
+        // 纸面字号梯度：10 / 11 / 12 / 14 / 16 / 18
+        'pc-xs': ['10px', { lineHeight: '1.4' }],
+        'pc-sm': ['11px', { lineHeight: '1.45' }],
+        'pc-md': ['12px', { lineHeight: '1.5' }],
+        'pc-lg': ['14px', { lineHeight: '1.4' }],
+        'pc-xl': ['16px', { lineHeight: '1.3' }],
+        'pc-2xl': ['18px', { lineHeight: '1.2' }],
       },
       spacing: {
         '0': '0px',
@@ -128,6 +135,24 @@ const config: Config = {
           300: "#dddddd",
           200: "#eeeeee",
           100: "#f7f7f7",
+        },
+        // 纸面文字层级：正文 / 次级 / 说明 / 提示
+        ink: {
+          DEFAULT: "#232323",
+          soft: "#4a4438",
+          muted: "#6b6455",
+          hint: "#8b8474",
+        },
+        // 纸面底色与分隔线
+        paper: {
+          DEFAULT: "#fbf9f4",
+          tint: "#f2eee4",
+          hover: "#f7f4ed",
+          line: {
+            DEFAULT: "#d9d2c4",
+            hover: "#c9c0ad",
+            faint: "#e8e2d6",
+          },
         },
       },
       borderRadius: {

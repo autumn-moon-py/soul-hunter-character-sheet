@@ -24,7 +24,7 @@ function Status({ tone, children }: { tone: "ok" | "error" | "warn"; children: R
         ? "border-destructive/30 bg-destructive/5 text-destructive"
         : "border-amber-200 bg-amber-50 text-amber-700";
   return (
-    <span className={`inline-flex items-center gap-1 rounded border px-2 py-0.5 text-[11px] font-medium ${styles}`}>
+    <span className={`inline-flex items-center gap-1 rounded border px-2 py-0.5 text-xs font-medium ${styles}`}>
       {children}
     </span>
   );

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { exportCharacterHtml } from "@/lib/soulhunter/export-html";
 import { useCharacterStore } from "@/lib/soulhunter/store";
 import { cn } from "@/lib/utils";
+import { AiStatusButton } from "./ai-status-button";
 import { CheckDialog } from "./check-dialog";
 import { RecordDialog } from "./record-dialog";
 import { SaveDialog } from "./save-dialog";
@@ -88,6 +89,10 @@ export function Dock({
           >
             <ShieldCheck className="h-4 w-4" />
           </Button>
+
+          <span className="mx-1 h-5 w-px shrink-0 bg-[#e4e4e7]" />
+
+          <AiStatusButton />
         </div>
       </div>
 

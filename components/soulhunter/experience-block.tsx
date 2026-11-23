@@ -28,7 +28,7 @@ function TagRow({
   }, [tag]);
 
   return (
-    <div className="group flex items-start gap-1 rounded border border-[#e8e2d6] bg-white/60 px-1.5 py-1 focus-within:border-[#c9c0ad]">
+    <div className="group flex items-start gap-1 rounded border border-paper-line-faint bg-white/60 px-1.5 py-1 focus-within:border-paper-line-hover">
       <Textarea
         ref={ref}
         rows={1}
@@ -49,7 +49,7 @@ function TagRow({
       <button
         type="button"
         aria-label={`移除经历标签 ${index + 1}`}
-        className="mt-[1px] shrink-0 text-[#8b8474] opacity-0 transition-opacity hover:text-destructive group-hover:opacity-100 group-focus-within:opacity-100 focus-visible:opacity-100"
+        className="mt-[1px] shrink-0 text-ink-hint opacity-0 transition-opacity hover:text-destructive group-hover:opacity-100 group-focus-within:opacity-100 focus-visible:opacity-100"
         onClick={onRemove}
       >
         <X className="h-3 w-3" />
@@ -83,7 +83,7 @@ export function ExperienceBlock() {
         {tags.length < 3 ? (
           <button
             type="button"
-            className="flex w-full items-center justify-center rounded border border-dashed border-[#d9d2c4] py-1 text-[10px] text-[#8b8474] transition-colors hover:border-[#a1a1aa] hover:text-[#232323]"
+            className="flex w-full items-center justify-center rounded border border-dashed border-paper-line py-1 text-pc-xs text-ink-hint transition-colors hover:border-paper-line-hover hover:text-ink"
             onClick={() => setExperienceTags([...tags, ""])}
           >
             + 添加经历标签

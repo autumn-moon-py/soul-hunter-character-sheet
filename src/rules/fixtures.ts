@@ -20,8 +20,6 @@ export function createLegalCharacter(): SoulHunterCharacter {
       codename: "血焰子",
       gender: "男",
       age: "24",
-      appearance: "短发，常穿深色风衣。",
-      personality: "嘴上不饶人，遇事不退。",
       background: "挚友死于神秘事件，因此成为狩魂者。",
     },
     bond: {

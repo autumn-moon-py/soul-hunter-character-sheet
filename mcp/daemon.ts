@@ -22,7 +22,9 @@ const projectRoot = findProjectRoot(
 const backupDir =
   process.env.SOUL_HUNTER_AI_BACKUPS ?? path.join(projectRoot, "ai-backups");
 const allowedOrigins = buildAllowedOrigins(process.env.SOUL_HUNTER_WEB_ORIGINS);
-const bridgeToken = randomUUID();
+// 允许固定 token，便于调试时重启守护进程后让已连接的 MCP 服务继续复用
+const bridgeToken =
+  process.env.SOUL_HUNTER_AI_TOKEN?.trim() || randomUUID();
 
 let snapshot: CharacterSnapshot | null = null;
 let revision = 0;

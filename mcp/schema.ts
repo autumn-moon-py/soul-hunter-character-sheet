@@ -27,8 +27,6 @@ const identityFieldSchema = z.enum([
   "codename",
   "gender",
   "age",
-  "appearance",
-  "personality",
   "background",
 ]);
 
@@ -68,6 +66,7 @@ export const operationSchema = z.discriminatedUnion("op", [
   }),
   z.object({ op: z.literal("setExperienceTags"), tags: z.array(z.string()) }),
   z.object({ op: z.literal("setSoulWeaponName"), value: z.string() }),
+  z.object({ op: z.literal("setPockets"), value: z.string() }),
   z.object({
     op: z.literal("setIdentityField"),
     field: identityFieldSchema,

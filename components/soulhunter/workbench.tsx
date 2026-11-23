@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import { Loader2 } from "lucide-react";
 import { useCharacterStore } from "@/lib/soulhunter/store";
 import { loadCharacter, saveCharacter } from "@/lib/soulhunter/storage";
-import { AiPanel } from "./ai-panel";
 import { Sheet } from "./sheet";
 
 export default function Workbench() {
@@ -40,10 +39,9 @@ export default function Workbench() {
 
   return (
     <div className="min-h-screen pb-24">
-      <main id="workbench-main" className="mx-auto max-w-[1100px] px-4 py-5 lg:px-6">
+      <main id="workbench-main" className="mx-auto max-w-[1320px] px-4 py-5 lg:px-6">
         <Sheet />
       </main>
-      <AiPanel />
       <span className="no-print pointer-events-none fixed bottom-1 right-2 z-20 text-[10px] leading-none text-zinc-400">
         {process.env.NEXT_PUBLIC_APP_VERSION}
       </span>

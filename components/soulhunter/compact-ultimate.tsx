@@ -42,7 +42,7 @@ export function CompactUltimateBlock({ tier }: { tier: 1 | 2 }) {
             value={selectedId ?? "none"}
             onValueChange={(value) => setUltimate(tier, value === "none" ? undefined : value)}
           >
-            <SelectTrigger className="h-[22px] text-[11px]" disabled={!unlocked}>
+            <SelectTrigger className="h-[22px] text-pc-sm" disabled={!unlocked}>
               <SelectValue placeholder={unlocked ? "选择绝技" : "灵识不足"} />
             </SelectTrigger>
             <SelectContent>
@@ -57,24 +57,24 @@ export function CompactUltimateBlock({ tier }: { tier: 1 | 2 }) {
         </Line>
 
         {ultimate ? (
-          <div className="border-t border-[#d9d2c4] px-2 py-0.5">
-            <div className="flex flex-wrap gap-x-3 text-[9px] text-[#8b8474]">
+          <div className="border-t border-paper-line px-2 py-0.5">
+            <div className="flex flex-wrap gap-x-3 text-pc-xs text-ink-hint">
               <span>类型：{ultimate.domain}</span>
               <span>对应魂魄：{ultimate.soul}</span>
             </div>
-            <p className="mt-0.5 line-clamp-2 text-[10px] leading-snug text-[#4a4438]">
+            <p className="mt-0.5 line-clamp-2 text-pc-sm leading-snug text-ink-soft">
               {ultimate.effect}
             </p>
             <button
               type="button"
-              className="mt-0.5 text-[9px] text-[#8b8474] hover:text-[#3f3f46]"
+              className="mt-0.5 text-pc-xs text-ink-hint hover:text-ink-soft"
               onClick={() => setDetailOpen(true)}
             >
               详情
             </button>
           </div>
         ) : (
-          <p className="px-2 py-1 text-[10px] text-[#8b8474]">尚未选择</p>
+          <p className="px-2 py-1 text-pc-sm text-ink-hint">尚未选择</p>
         )}
       </Block>
 

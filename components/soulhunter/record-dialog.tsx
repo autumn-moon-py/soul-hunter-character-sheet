@@ -58,7 +58,7 @@ export function RecordDialog({
 
         <div className="px-5 pb-4 pt-2">
           <div className="rounded-md border border-zinc-200 bg-zinc-50 p-3">
-            <code className="block select-all break-all font-mono text-[11px] leading-relaxed text-zinc-700">
+            <code className="block select-all break-all font-mono text-xs leading-relaxed text-zinc-700">
               {dice}
             </code>
           </div>
