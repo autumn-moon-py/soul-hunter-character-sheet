@@ -37,7 +37,9 @@ function baseIdsOf(kind: CardKind, derived: DerivedStats): string[] {
 }
 
 function cardMeta(card: AnyContentCard): string {
-  if (card.kind === "martial") return `消耗 ${card.cost} · 目标 ${card.target}`;
+  if (card.kind === "martial") {
+    return `消耗 ${card.cost} · 目标 ${card.target} · 灵能力辅助：${card.support ? "可" : "不可"}`;
+  }
   if (card.kind === "spell") return `${card.category} · 消耗 ${card.cost} · 目标 ${card.target}`;
   return "";
 }

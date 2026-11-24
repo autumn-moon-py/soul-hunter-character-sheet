@@ -152,6 +152,9 @@ const CardRow = memo(function CardRow({
           <div className="mt-1 flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-muted-foreground">
             {"cost" in card ? <span>消耗：{card.cost}</span> : null}
             {"target" in card ? <span>目标：{card.target}</span> : null}
+            {card.kind === "martial" ? (
+              <span>灵能力辅助：{card.support ? "可" : "不可"}</span>
+            ) : null}
           </div>
           {effect ? (
             <p className="mt-1.5 whitespace-pre-line text-xs leading-relaxed text-foreground/80">
