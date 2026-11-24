@@ -38,7 +38,7 @@ export default function Workbench() {
   }
 
   return (
-    <div className="min-h-screen pb-24">
+    <div className="min-h-screen pb-28 sm:pb-24">
       <main id="workbench-main" className="mx-auto max-w-[1320px] px-4 py-5 lg:px-6">
         <Sheet />
       </main>

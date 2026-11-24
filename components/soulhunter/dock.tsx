@@ -33,7 +33,7 @@ export function Dock({
   return (
     <>
       <div className="no-print fixed inset-x-0 bottom-3 z-30 flex justify-center px-3">
-        <div className="flex max-w-full items-center gap-1 overflow-x-auto rounded-xl border border-[#e4e4e7] bg-white/95 px-1.5 py-1.5 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.25)] backdrop-blur">
+        <div className="flex max-w-full flex-wrap items-center justify-center gap-1 overflow-x-auto rounded-xl border border-[#e4e4e7] bg-white/95 px-1.5 py-1.5 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.25)] backdrop-blur sm:flex-nowrap sm:justify-start">
           <div className="flex shrink-0 items-center gap-0.5">
             {PAGES.map(([key, label]) => (
               <button
@@ -52,7 +52,7 @@ export function Dock({
             ))}
           </div>
 
-          <span className="mx-1 h-5 w-px shrink-0 bg-[#e4e4e7]" />
+          <span className="mx-1 hidden h-5 w-px shrink-0 bg-[#e4e4e7] sm:block" />
 
           <button
             type="button"
@@ -90,7 +90,7 @@ export function Dock({
             <ShieldCheck className="h-4 w-4" />
           </Button>
 
-          <span className="mx-1 h-5 w-px shrink-0 bg-[#e4e4e7]" />
+          <span className="mx-1 hidden h-5 w-px shrink-0 bg-[#e4e4e7] sm:block" />
 
           <AiStatusButton />
         </div>

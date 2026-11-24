@@ -80,6 +80,11 @@ body {
 /* 纸面主栅格：手机单列，中等屏两列，宽屏三列 */
 .sheet-grid {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "left"
+    "middle"
+    "right";
   gap: 12px;
 }
 
