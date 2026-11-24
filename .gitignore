@@ -12,4 +12,6 @@ mcp/dist/
 ai-backups/
 logs/
 
+next-env.d.ts
+
 .iga/

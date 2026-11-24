@@ -59,6 +59,11 @@ function cardText(card: AnyContentCard): string {
 
 const SPELL_CATEGORIES = ["符箓", "祷诀", "凭术", "阵法", "基础"] as const;
 
+/** 混合型术法（如「效果术法/攻击术法【体魄】」）同时归入两类 */
+function matchesSpellType(type: string, filter: "effect" | "attack"): boolean {
+  return filter === "attack" ? type.includes("攻击术法") : type.includes("效果术法");
+}
+
 function costBucket(cost: string): "none" | "low" | "mid" | "high" {
   if (!cost || cost.includes("无")) return "none";
   const match = cost.match(/\d+/);
@@ -206,6 +211,7 @@ export function CardPicker({
   const [onlyAvailable, setOnlyAvailable] = useState(false);
   const [hideSelected, setHideSelected] = useState(false);
   const [typeFilter, setTypeFilter] = useState("all");
+  const [spellTypeFilter, setSpellTypeFilter] = useState("all");
   const [secretFilter, setSecretFilter] = useState("all");
   const [costFilter, setCostFilter] = useState("all");
   const showTypeFilters = kind === "spell" || kind === "martial";
@@ -237,6 +243,14 @@ export function CardPicker({
       ) {
         return false;
       }
+      if (
+        kind === "spell" &&
+        card.kind === "spell" &&
+        spellTypeFilter !== "all" &&
+        !matchesSpellType(card.type, spellTypeFilter as "effect" | "attack")
+      ) {
+        return false;
+      }
       if (kind === "martial" && card.kind === "martial") {
         if (typeFilter === "support" && !card.support) return false;
         if (typeFilter === "normal" && card.support) return false;
@@ -256,7 +270,7 @@ export function CardPicker({
         ? canAddCard(character, kind, card, quota, selected) || selected
         : true;
     });
-  }, [allCards, character, hideSelected, kind, onlyAvailable, query, quota, replaceId, showTypeFilters, secretFilter, typeFilter, costFilter]);
+  }, [allCards, character, hideSelected, kind, onlyAvailable, query, quota, replaceId, showTypeFilters, secretFilter, spellTypeFilter, typeFilter, costFilter]);
 
   // 两列时按奇偶交替分配，保持左右阅读顺序，同时每列内部间距一致
   const columns = useMemo(() => {
@@ -342,6 +356,18 @@ export function CardPicker({
                   )}
                 </SelectContent>
               </Select>
+              {kind === "spell" ? (
+                <Select value={spellTypeFilter} onValueChange={setSpellTypeFilter}>
+                  <SelectTrigger className="h-9 w-[112px] text-xs" aria-label="术法类型筛选">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">全部类型</SelectItem>
+                    <SelectItem value="effect">效果术法</SelectItem>
+                    <SelectItem value="attack">攻击术法</SelectItem>
+                  </SelectContent>
+                </Select>
+              ) : null}
               <Select value={secretFilter} onValueChange={setSecretFilter}>
                 <SelectTrigger className="h-9 w-[96px] text-xs" aria-label="秘传筛选">
                   <SelectValue />
