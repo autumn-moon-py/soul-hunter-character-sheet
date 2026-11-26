@@ -96,7 +96,7 @@ export function planGrowth(
       warnings.push(
         derived.quotas.imprints === 0
           ? "灵能印记尚未解锁，需要灵识达到 12 或心魂达到 3。"
-          : "灵能印记配额已满，继续锻造需要先提升心魂或灵识。",
+          : "灵能印记配额已满，继续锻造需要先提升心魂强度。",
       );
     }
   }

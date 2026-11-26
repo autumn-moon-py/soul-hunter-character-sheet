@@ -12,7 +12,6 @@ import {
 } from "@/components/ui/select";
 import { catalog } from "@/src/content";
 import { BASE, GROWTH_COSTS } from "@/src/rules/constants";
-import { derive } from "@/src/rules/derive";
 import {
   canCreateImprint,
   canIncreaseInsight,
@@ -140,11 +139,8 @@ export function GrowthPanel() {
   const [replacedTag, setReplacedTag] = useState("");
 
   const exp = character.resources.exp ?? 0;
-  const derived = useMemo(() => derive(character), [character]);
-  const stylePoints = character.resources.stylePoints ?? 0;
   const yesCount = answers.filter(Boolean).length;
   const pendingExp = defects + summaryExp(yesCount);
-  const styleExp = Math.floor(stylePoints / 10);
 
   const imprintOptions = useMemo(
     () =>
@@ -173,13 +169,6 @@ export function GrowthPanel() {
     setCharacter(limitExp(character, pendingExp));
     setDefects(0);
     setAnswers(SUMMARY_QUESTIONS.map(() => false));
-  };
-
-  const convertStylePoints = () => {
-    if (styleExp <= 0) return;
-    const next = limitExp(character, styleExp);
-    next.resources.stylePoints = BASE.stylePoints;
-    setCharacter(next);
   };
 
   const replacing = character.experienceTags.length >= 3;
@@ -211,15 +200,6 @@ export function GrowthPanel() {
           <span className="text-ink-muted">本次 +{pendingExp}</span>
           <MicroButton disabled={pendingExp <= 0} onClick={gainExperience}>
             应用
-          </MicroButton>
-        </div>
-        <span className="h-4 w-px bg-paper-line-faint" />
-        <div className="flex items-center gap-1.5 text-pc-xs">
-          <span className="text-ink-muted">
-            时髦值 {stylePoints} · 可换 {styleExp}
-          </span>
-          <MicroButton disabled={styleExp <= 0} onClick={convertStylePoints}>
-            转化
           </MicroButton>
         </div>
       </div>
@@ -296,15 +276,6 @@ export function GrowthPanel() {
                 min={0}
                 max={BASE.expMax}
                 onChange={(value) => setResource("exp", value)}
-              />
-            </div>
-            <div className="flex items-center justify-between">
-              <span className="text-pc-sm">道具点</span>
-              <PaperStepper
-                value={character.resources.itemPoints ?? 0}
-                min={0}
-                max={derived.itemPointsMax}
-                onChange={(value) => setResource("itemPoints", value)}
               />
             </div>
           </div>

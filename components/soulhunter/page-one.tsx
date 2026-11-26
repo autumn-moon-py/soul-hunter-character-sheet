@@ -511,7 +511,7 @@ function WeaponBlock() {
               disabled={!unlocked}
               placeholder="选择或输入形态"
               aria-label="灵魂武器形态"
-              className="min-w-0 flex-1"
+              className="min-w-0 flex-1 text-center"
               onChange={(event) => setSoulWeaponField("form", event.target.value)}
             />
             <DropdownMenu>

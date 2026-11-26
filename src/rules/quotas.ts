@@ -29,11 +29,9 @@ export function ultimateQuota(insight: number): number {
 
 export function imprintQuota(insight: number, soul: number): number {
   const strength = strengthFromValue(soul);
+  // 需先觉醒灵魂武器；配额不能超过心魂强度
   if (!(insight >= 12 || soul >= 3) || strength < 1) return 0;
-  // 初始 1 个；心魂 A（5）觉醒第二个；心魂 SSS+ 开放到 4 个
-  if (soul >= 9) return 4;
-  if (soul >= 5) return 2;
-  return 1;
+  return strength;
 }
 
 /** 天生术法：灵迹固定；凝爆/超感在智慧 5 时补全 */

@@ -27,14 +27,15 @@ describe("quotas", () => {
     expect([9, 10, 13, 14, 17, 18].map(ultimateQuota)).toEqual([0, 0, 0, 1, 1, 2]);
   });
 
-  it("caps imprints by 1/2/4 at the three growth stages", () => {
+  it("caps imprints by soul strength after awakening", () => {
     expect(imprintQuota(9, 2)).toBe(0);
     expect(imprintQuota(9, 3)).toBe(1);
     expect(imprintQuota(12, 1)).toBe(0);
     expect(imprintQuota(12, 2)).toBe(1);
-    expect(imprintQuota(9, 4)).toBe(1);
+    expect(imprintQuota(9, 4)).toBe(2);
     expect(imprintQuota(9, 5)).toBe(2);
-    expect(imprintQuota(16, 7)).toBe(2);
+    expect(imprintQuota(16, 6)).toBe(3);
+    expect(imprintQuota(16, 7)).toBe(3);
     expect(imprintQuota(18, 9)).toBe(4);
   });
 

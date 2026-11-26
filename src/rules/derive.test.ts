@@ -72,7 +72,7 @@ describe("derive", () => {
     const at16 = withAttributes(createLegalCharacter(), { body: 5, mind: 5, soul: 6 }, 16);
     expect(derive(at16).quotas.specialties).toBe(2);
     expect(derive(at16).quotas.ultimates).toBe(1);
-    expect(derive(at16).quotas.imprints).toBe(2);
+    expect(derive(at16).quotas.imprints).toBe(3);
 
     const at18 = withAttributes(createLegalCharacter(), { body: 6, mind: 6, soul: 6 }, 18);
     expect(derive(at18).quotas.specialties).toBe(2);

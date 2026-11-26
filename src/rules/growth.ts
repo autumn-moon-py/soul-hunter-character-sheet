@@ -93,7 +93,7 @@ export function tryCreateImprint(
     return {
       ok: false,
       character,
-      error: `灵能印记数量已达上限 ${quota}，需要先提升心魂或灵识`,
+      error: `灵能印记数量已达上限 ${quota}，需要先提升心魂强度`,
     };
   }
 
